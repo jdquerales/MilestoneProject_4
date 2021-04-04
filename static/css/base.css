@@ -69,3 +69,40 @@ text-decoration: none;
     color : whitesmoke;
     margin-left: 5px;
 }
+
+.btn-main-sections {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 23px;
+  width: 160px;
+  background-color: #f05f40;
+  border-color: #f05f40;
+}
+
+.btn-main-sections:hover,
+.btn-main-sections:active,
+.btn-main-sections:focus,
+.btn-main-sections:active:focus:visited {
+  background-color: #d3b3ac;
+  border-color: #d3b3ac;
+}
+
+.btn-search {
+    background-color: #f05f40;
+}
+
+.shopping-basket-icon{
+    font-size: 30px;
+    color: #f05f40;
+}
+
+.list-inline-item{
+    margin-right:20px;
+    margin-left: 20px;
+}
+
+.nav-bar-links {
+    font-size: 30px;
+    color: #f05f40;
+}

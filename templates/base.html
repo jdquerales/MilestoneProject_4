@@ -57,10 +57,61 @@
             </div>
 
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                
+                <form method="GET" action=" ">
+                    <div class="input-group w-80">
+                        <input class="form-control border border-black rounded-0" type="text" name="q"
+                            placeholder="Search our site">
+                        <div class="input-group-append">
+                            <button class="form-control btn border btn-search rounded-0" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+
+                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                 
+                 {% if request.user.is_authenticated %}
+                      {% if request.user.is_superuser %}
+                          <li class="list-inline-item"></li>
+                                   <span class="shopping-basket-icon"><a href="" class="links nav-bar-links">Product Management</a></span> 
+                      {% endif %}
+                    <li class="list-inline-item">
+                     <span class="shopping-basket-icon">
+                        <a href="{% url 'account_logout' %}" class="links nav-bar-links"> Logout </a> 
+                        </span>
+                    </li>
+                    {% else %}
+                          <li class="list-inline-item">
+                        <span class="shopping-basket-icon">
+                        <a href="{% url 'account_login' %}" class="links nav-bar-links"> Login </a> 
+                        </span>
+                    </li>
+
+                    
+
+
+                    <li class="list-inline-item">
+                        <span class="shopping-basket-icon">
+                        <a href="{% url 'account_signup' %}" class="links nav-bar-links"> Register </a> 
+                        </span>
+                    </li>
+
+                 {% endif %}
+
+                    <li class="list-inline-item">
+                        <span class="shopping-basket-icon">
+                        <i class="fas fa-shopping-basket"></i>
+                        </span>
+                    </li>
+                </ul>
+            
                 
+
             </div>
 
         </div>
