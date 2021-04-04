@@ -1,0 +1,17 @@
+# Set the build language to Python
+language: python
+# Set the python version to 3.8
+python:
+    - "3.8"
+# Install the all dependencies
+install: 
+    - "pip install -r requirements.txt"
+    - pip3 install coverage
+    - pip3 install codecov
+# Run the unit test 
+script:
+    - SECRET_KEY="placeholdersecretkey" python3 manage.py test
+    - SECRET_KEY="placeholdersecretkey" coverage run --source=wearable_tech manage.py test
+# Push the results back to codecov
+after_success:
+    - codecov
