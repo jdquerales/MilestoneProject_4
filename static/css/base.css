@@ -1,0 +1,10 @@
+html{
+    height: 100%;
+}
+
+body{
+    background: url('/media/home2.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    font-family: 'Open Sans';
+}
