@@ -5,21 +5,67 @@ html{
 body{
     background: url('/media/home2.jpeg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(85vh);
     font-family: 'Open Sans Condensed', sans-serif;
+    overflow : hidden;
+}
+
+footer{
+    background-color: black;
+    height: 15vh;
+    overflow : hidden;
 }
 
 .text-white-uppercase {
     text-transform: uppercase;
-    color : white;
+    color : whitesmoke;
 }
 
 .logo-font {
     font-family: 'Dancing Script', cursive;
-    color: white;
+    color: #ff7b7b;
     font-size: 50px;
 }
 
 .links {
 text-decoration: none;
+}
+
+.text-center {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.social-links {
+  margin: 0 0px 0px 0;
+  padding-bottom: 25px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #ff7b7b;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.social-links a:hover {
+  background-color: #d3b3ac;
+  border-color: #d3b3ac;
+}
+
+.copyright {
+    color : whitesmoke;
+    margin-left: 5px;
 }
