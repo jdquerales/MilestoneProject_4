@@ -13,3 +13,13 @@ body{
     text-transform: uppercase;
     color : white;
 }
+
+.logo-font {
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 50px;
+}
+
+.links {
+text-decoration: none;
+}

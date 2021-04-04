@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     {% endblock %}
 
     {% block extra_meta %}
@@ -19,6 +19,7 @@
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
     {% endblock %}
@@ -47,13 +48,30 @@
 <body>
     <header class="container-fluid fixed-top">
 
+        <div class="row">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <a href="{% url 'home' %}" class="main-logo-link links">
+                    <h2 class="logo-font">SmartTech.</h2>
+                </a>
+            </div>
+
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                
+            </div>
+
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                
+            </div>
+
+        </div>
+
 
     </header>
 
     {% if messages %}
-        <div class="message-container">
+    <div class="message-container">
 
-        </div>
+    </div>
     {% endif %}
 
     {% block content %}
