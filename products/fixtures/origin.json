@@ -1,0 +1,2 @@
+[{"pk": 1, "model": "products.origin", "fields": {"name": "america", "friendly_name": "America"}}, {"pk": 2, "model": "products.origin", "fields": {"name": "europe", "friendly_name": "Europe"}}, {"pk": 3, "model": "products.origin", "fields": {"name": "asia", "friendly_name": "Asia"}}]
+
