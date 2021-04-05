@@ -40,7 +40,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     body_location= models.ForeignKey('Location', null=True, blank=True, on_delete=models.SET_NULL)
-    brand = models.CharField(max_length=254)
+    brand = models.CharField(max_length=254, null=True, blank=True)
     origin = models.ForeignKey('Origin', null=True, blank=True, on_delete=models.SET_NULL)
     image = models.ImageField(null=True, blank = True)
 
