@@ -1,18 +1,107 @@
 html{
+    scroll-behavior: smooth;
     height: 100%;
 }
 
+
 body{
+    margin: 0;
+    padding:0;
+    font-size: 18px;
     background: url('/media/home2.jpeg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(85vh);
     font-family: 'Open Sans Condensed', sans-serif;
-    overflow : hidden;
+}
+
+a {
+    color: #ff7b7b;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+a:hover {
+    color: #d3b3ac;
+}
+
+.header-background {
+    position: static;
+    display: block;
+    overflow: visible;
+    top: 0;
+    max-height:auto;
+    min-height: 85vh;
+    margin-bottom: 50px;
+    padding-bottom: 70px;
+    white-space: normal;
+    object-fit: fill;
+    -o-object-fit: fill;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+}
+
+.sticky-nav{
+    position:sticky;
+    position: -webkit-sticky;
+    top:0px;
+    padding:20px;
+    z-index:1;
+    -webkit-align-self: auto;
+    -ms-felx-item-align: auto;
+    -ms-grid-row-align: auto;
+    align-self: auto;
+    -webkit-box-orient: 1;
+    -webkit-order: 0;
+    -ms-flex-order:0;
+    order:0;
+    background-color: rgba(12,32,59,0.5);
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 10px 6px;
+    outline: none;
+}
+
+.navbar-toggler span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border: 1px;
+    background: #fff;
+}
+
+.navbar-toggler span + span {
+    margin-top: 4px;
+    width: 22px;
+}
+
+.navbar-toggler span + span + span {
+    width: 22px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link.active{
+    color:#e74c3c;
+}
+
+.btn {
+    background-color: #e74c3c;
+    color:white;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+}
+
+.btn:hover {
+    background-color: #0a3d62;
+    color:white;
 }
 
 footer{
     background-color: black;
-    height: 15vh;
+    max-height: auto;
+    min-height: 15vh;
     overflow : hidden;
 }
 
@@ -112,4 +201,15 @@ text-decoration: none;
 .nav-bar-links:focus
 .nav-bar-links:active:focus:visited{
   color: #d3b3ac;
+}
+
+/* Products page */
+.overlay{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: whitesmoke;
+    z-index: -1;
 }

@@ -46,15 +46,98 @@
     <title>Wearable Tech {% block extra_title %}{% endblock %}</title>
 </head>
 <body>
+
+<div class="header-background">
+<div id="nav" class="sticky-nav">
+
+    <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">                <a href="{% url 'home' %}" class="main-logo-link links">
+                    <h2 class="logo-font">SmartTech.</h2>
+                </a></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      <span> </span>
+      <span> </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+
+        <li class="nav-item ">
+                            <a href="{% url 'account_logout' %}" class="nav-link active" aria-current="page"> Home </a>
+                    </li>
+                           {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                    <li class="nav-item"></li>
+                    <a href="" class="nav-link">Product
+                            Management</a>
+                    {% endif %}
+                    <li class="nav-item">
+                            <a href="{% url 'account_logout' %}" class="nav-link"> Logout </a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                            <a href="{% url 'account_login' %}" class="nav-link"> Login </a>
+                    </li>
+                    <li class="nav-item">
+                            <a href="{% url 'account_signup' %}" class="nav-link"> Register </a>
+                    </li>
+
+                    {% endif %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Products</a></li>
+            <li><a class="dropdown-item" href="#">Products</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Products</a></li>
+          </ul>
+        </li>
+
+                    <li class="nav-item">
+                            <a href="" class="nav-link"> Reviews </a>
+                    </li>
+
+                                       <li class="list-inline-item">
+                        <span class="shopping-basket-icon">
+                            <i class="fas fa-shopping-basket"></i>
+                        </span>
+                    </li>
+
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+</div>
+
+<h1> Landing Page </h1>
+
+    {% block content %}
+    {% endblock %}
+
+
+</div>
+
+
+
+
+
+
+
     <header class="container-fluid fixed-top">
 
         <div class="row">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="main-logo-link links">
-                    <h2 class="logo-font">SmartTech.</h2>
-                </a>
-            </div>
 
+            </div>
+<!--
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action=" ">
                     <div class="input-group w-80">
@@ -70,48 +153,8 @@
                     </div>
                 </form>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+-->
 
-                    {% if request.user.is_authenticated %}
-                    {% if request.user.is_superuser %}
-                    <li class="list-inline-item"></li>
-                    <span class="shopping-basket-icon"><a href="" class="links nav-bar-links">Product
-                            Management</a></span>
-                    {% endif %}
-                    <li class="list-inline-item">
-                        <span class="shopping-basket-icon">
-                            <a href="{% url 'account_logout' %}" class="links nav-bar-links"> Logout </a>
-                        </span>
-                    </li>
-                    {% else %}
-                    <li class="list-inline-item">
-                        <span class="shopping-basket-icon">
-                            <a href="{% url 'account_login' %}" class="links nav-bar-links"> Login </a>
-                        </span>
-                    </li>
-
-
-
-
-                    <li class="list-inline-item">
-                        <span class="shopping-basket-icon">
-                            <a href="{% url 'account_signup' %}" class="links nav-bar-links"> Register </a>
-                        </span>
-                    </li>
-
-                    {% endif %}
-
-                    <li class="list-inline-item">
-                        <span class="shopping-basket-icon">
-                            <i class="fas fa-shopping-basket"></i>
-                        </span>
-                    </li>
-                </ul>
-
-
-
-            </div>
 
         </div>
 
@@ -124,16 +167,14 @@
     </div>
     {% endif %}
 
-    {% block content %}
-    {% endblock %}
+
 
     {% block postloadjs %}
     {% endblock %}
 
-</body>
 
 <footer>
-<div class="row">
+<div class="row container-fluid">
 <div class="col-lg-4 col-md-4 text-center">
 <p class="text-white-uppercase lead">+1 123456789</p> 
 </div>
@@ -169,5 +210,8 @@ OVER XX</p>
 </div>
 
 </footer>
+</body>
+
+
 
 </html>

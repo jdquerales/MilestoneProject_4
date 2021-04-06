@@ -2,10 +2,15 @@
 {% load static %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
+    <div class="overlay"></div>
+    <div class="container-fluid products-page">
+        <div class="row container-fluid">
             <div class="col">
-                {{ products }}
+            {% for product in products %}
+            <ul>
+                <li>{{ product.description }}</li>
+            </ul>
+            {% endfor %}
             </div>
         </div>
     </div>
