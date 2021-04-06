@@ -2,6 +2,9 @@ from django.db import models
 
 
 class Category(models.Model):
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -13,6 +16,9 @@ class Category(models.Model):
 
 
 class Origin(models.Model):
+    class Meta:
+        verbose_name_plural = 'Origins'
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -24,6 +30,9 @@ class Origin(models.Model):
 
 
 class Location(models.Model):
+    class Meta:
+        verbose_name_plural = 'Locations'
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -35,6 +44,9 @@ class Location(models.Model):
 
 
 class Product(models.Model):
+    class Meta:
+        verbose_name_plural = 'Products'
+
     description = models.TextField()
     friendly_name = models.CharField(max_length=254)
     price = models.DecimalField(max_digits=6, decimal_places=2)
