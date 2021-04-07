@@ -7,8 +7,17 @@
         <div class="row container-fluid">
             <div class="col">
             {% for product in products %}
+
+
+ 
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}{{product.image.url}}"
+                                alt="{{ product.name }}">
+
+                        
+
+
             <ul>
-                <li>{{ product.description }}</li>
+                <li>{{ product.image }}</li>
             </ul>
             {% endfor %}
             </div>
