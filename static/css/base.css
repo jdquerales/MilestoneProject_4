@@ -243,3 +243,11 @@ text-decoration: none;
 .nav-link{
     font-size: 28px;
 }
+
+.card{
+    min-height: 400px;
+}
+
+.col{
+    margin: 0px 0px 0px 0px;
+}
