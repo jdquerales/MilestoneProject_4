@@ -30,8 +30,6 @@ a:hover {
     top: 0;
     max-height:auto;
     min-height: 85vh;
-    margin-bottom: 50px;
-    padding-bottom: 70px;
     white-space: normal;
     object-fit: fill;
     -o-object-fit: fill;
@@ -213,3 +211,19 @@ text-decoration: none;
     background: whitesmoke;
     z-index: -1;
 }
+
+/* Base html heading */
+.heading {
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+    color: #fff;
+}
+
+.vertical-alignment{
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+}
+
