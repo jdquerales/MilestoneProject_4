@@ -92,8 +92,8 @@ a:hover {
 }
 
 .btn:hover {
-    background-color: #0a3d62;
-    color:white;
+    background-color: #d3b3ac;
+    border-color: #d3b3ac;
 }
 
 footer{
@@ -250,4 +250,8 @@ text-decoration: none;
 
 .col{
     margin: 0px 0px 0px 0px;
+}
+
+.main-form{
+    width: 50%;
 }
