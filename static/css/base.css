@@ -219,11 +219,23 @@ text-decoration: none;
     line-height: 1.4;
     text-align: center;
     color: #fff;
+    margin-top: 180px;
+}
+
+.heading {
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+    color: #fff;
 }
 
 .vertical-alignment{
     display: flex;
     align-items: center;
-    margin-top: 150px;
+    text-align:center;
 }
 
+.row{
+    margin: 0px 0px 0px 0px;
+}

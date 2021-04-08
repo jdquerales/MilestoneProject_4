@@ -2,12 +2,12 @@
 {% load static %}
 
 {% block content %}
-    <div class="container vertical-alignment">
-        <div class="row">
-            <div class="main-section-page ">
+    <div class="container-fluid row vertical-alignment">
+        <div class="col-lg-12">
+            <div class="col main-section-page ">
                 <h1 class="display-4 text-white-uppercase heading">We provide Smart Control Solutions</h1>
-                <p class="lead text-white-uppercase heading">
-                    <a class="btn btn-primary btn-main-sections" href=" " target="_blank" role="button">Shop now!</a>
+                <p class="text-white-uppercase">
+                    <a class="btn btn-primary btn-main-sections buttons" href="{% url 'products' %}" target="_blank" role="button">Shop now!</a>
                 </p>
             </div>
         </div>
