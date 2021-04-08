@@ -239,3 +239,7 @@ text-decoration: none;
 .row{
     margin: 0px 0px 0px 0px;
 }
+
+.nav-link{
+    font-size: 28px;
+}
