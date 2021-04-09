@@ -26,7 +26,7 @@ SECRET_KEY = 'k$qm1you2to&6+=)e$mp-px&^$h4pm6+@sh=&_t-&ynf^cz_1='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 
@@ -90,28 +90,15 @@ AUTHENTICATION_BACKENDS = [
 SITE_ID = 1
 
 # Provider specific settings
-SOCIALACCOUNT_PROVIDERS = {
-    'facebook': {
-        # For each OAuth based provider, either add a ``SocialApp``
-        # (``socialaccount`` app) containing the required client
-        # credentials, or list them here:
-        'APP': {
-            'client_id': os.environ.get('FACEBOOK_APP_ID'),
-            'secret': os.environ.get('FACEBOOK_SECRET_KEY'),
-            'key': ''
-        }
-    },
-    'twitter': {
-        # For each OAuth based provider, either add a ``SocialApp``
-        # (``socialaccount`` app) containing the required client
-        # credentials, or list them here:
-        'APP': {
-            'client_id': os.environ.get('TWITTER_APP_ID'),
-            'secret': os.environ.get('TWITTER_SECRET_KEY'),
-            'key': ''
-        }
-    }
-}
+SOCIALACCOUNT_PROVIDERS =  { 'facebook':
+                               {'METHOD': 'oauth2',
+                                'SCOPE': ['email'],
+                                'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+                                'LOCALE_FUNC': lambda request: 'en_US',
+                                'VERSION': 'v2.4'
+                               }
+                           }
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
