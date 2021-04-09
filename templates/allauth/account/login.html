@@ -52,18 +52,18 @@
               <button class="btn btn-blue text-center" type="submit">{% trans "Sign In" %}</button>
             </form>
 
-          <div class="row mb-4 px-3"> <small class="font-weight-bold"> <a class="text-danger links"
-            href="{% url 'account_reset_password' %}">Forgot Password?</a></small> 
+            <div class="row mb-4 px-3"> <small class="font-weight-bold"> <a class="text-danger links"
+                  href="{% url 'account_reset_password' %}">Forgot Password?</a></small>
+            </div>
+
+            <div class="row mb-4 px-3"> <small class="font-weight-bold">Don't have an account? <a
+                  class="text-danger links" href="{{ signup_url }}">Register</a></small>
+            </div>
           </div>
 
-          <div class="row mb-4 px-3"> <small class="font-weight-bold">Don't have an account? <a class="text-danger links"
-                href="{{ signup_url }}">Register</a></small> 
-          </div>
         </div>
-
       </div>
     </div>
   </div>
-</div>
 
-{% endblock %}
+  {% endblock %}
