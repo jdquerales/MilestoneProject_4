@@ -238,6 +238,7 @@ footer {
   margin: 0px 0px 0px 0px;
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
+  padding: 0px 0px 0px 0px ;
 }
 
 .nav-link {
@@ -246,6 +247,9 @@ footer {
 
 .card {
   min-height: 400px;
+  width: 100%;
+  min-width: 100%;
+  align-items: center;
 }
 
 .card-login {
@@ -433,4 +437,10 @@ button:focus {
 .py-5 {
   padding-bottom: 1.5rem !important;
   padding-top: 1.5rem !important;
+}
+
+.font-weight-bold {
+  font-weight: 900 !important;
+  text-align: center;
+  font-size: 26px;
 }
