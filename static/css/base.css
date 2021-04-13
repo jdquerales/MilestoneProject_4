@@ -440,7 +440,5 @@ button:focus {
 }
 
 .font-weight-bold {
-  font-weight: 900 !important;
   text-align: center;
-  font-size: 26px;
 }
