@@ -2,40 +2,37 @@
 {% load static %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container-fluid">
-        <div class="row">
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
 
-        </div>
+    </div>
 
-        <div class="row">
-            <div class="col">
-
+    <div class="row">
+        <div class="col">
             <div class="row">
                 Our products
             </div>
-
             <div class="row">
                 {% for product in products %}
                 <div class="col">
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                         <div class="card border-5" style="width: 18rem;">
-                            <img src="{{ MEDIA_URL }}{{product.image.url}}" class="card-img-top imag-fluid" alt="{{ product.friendly_name }}">
+                            <img src="{{ MEDIA_URL }}{{product.image.url}}" class="card-img-top imag-fluid"
+                                alt="{{ product.friendly_name }}">
                             <div class="card-body">
-                              <p class="card-text">{{ product.friendly_name }}</p>
-                              <p class="font-weight-bold">€{{ product.price }}</p>
+                                <p class="card-text">{{ product.friendly_name }}</p>
+                                <p class="font-weight-bold">€{{ product.price }}</p>
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
                 {% endfor %}
             </div>
-
-
-            </div>
         </div>
-    
     </div>
 
- 
+</div>
+
+
 {% endblock %}
