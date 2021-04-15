@@ -211,14 +211,6 @@ footer {
 }
 
 /* Base html heading */
-.heading {
-  font-size: 4rem;
-  font-weight: bold;
-  line-height: 1.4;
-  text-align: center;
-  color: #fff;
-  margin-top: 180px;
-}
 
 .heading {
   font-size: 4rem;
@@ -226,6 +218,7 @@ footer {
   line-height: 1.4;
   text-align: center;
   color: #fff;
+  margin-top: 30vh;
 }
 
 .vertical-alignment {
@@ -271,6 +264,7 @@ footer {
   box-shadow: 0px 4px 8px 0px #f05f40;
   border-radius: 25px;
   width: 50%;
+  margin-top: 10vh;
 }
 
 .card2 {
