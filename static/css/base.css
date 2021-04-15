@@ -250,6 +250,11 @@ footer {
   background-color: #f0ffff;
 }
 
+.card-logout {
+  min-height: 100px;
+  background-color: #f0ffff;
+}
+
 .col {
   margin: 0px 0px 0px 0px;
 }
