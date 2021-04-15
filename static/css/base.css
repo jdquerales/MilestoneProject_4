@@ -395,7 +395,7 @@ button:focus {
 }
 
 .btn-blue:hover {
-  background-color: #000;
+  background-color: rgb(74, 127, 196);
   cursor: pointer;
 }
 
