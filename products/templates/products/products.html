@@ -33,6 +33,15 @@
                                 <p class="card-text">{{ product.friendly_name }}</p>
                                 <p class="font-weight-bold">€{{ product.price }}</p>
                             </div>
+                            {% if product.stock %}
+                            <div class="card-body">
+                                <h2><span class="badge bg-success">In Stock</span></h2>
+                            </div>
+                            {% else %}
+                            <div class="card-body">
+                                <h2><span class="badge bg-danger">Out-of-stock</span></h2>
+                            </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

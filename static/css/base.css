@@ -604,3 +604,16 @@ height: auto;
 .input-group{
   width: 100%;
 }
+
+.out-of-stock {
+  background-color: black;
+  color: red;
+  margin: 5px 5px 5px 5px;
+  font-weight: 500px;
+}
+
+.in-stock {
+  background-color: green;
+  color: white;
+  margin: 2px 2px 2px 2px;
+}
