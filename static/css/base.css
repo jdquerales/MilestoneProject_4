@@ -55,6 +55,11 @@ a:hover {
   background-color: rgba(12, 32, 59, 0.5);
 }
 
+
+.navbar-toggler-icon{
+font-size: 50px;
+}
+
 .navbar-toggler {
   border: none;
   padding: 10px 6px;
@@ -63,19 +68,19 @@ a:hover {
 
 .navbar-toggler span {
   display: block;
-  width: 22px;
-  height: 2px;
-  border: 1px;
+  width: 40px;
+  height: 3px;
+  border: 2px;
   background: #fff;
 }
 
 .navbar-toggler span + span {
-  margin-top: 4px;
-  width: 22px;
+  margin-top: 8px;
+  width: 40px;
 }
 
 .navbar-toggler span + span + span {
-  width: 22px;
+  width: 40px;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link.active {
@@ -260,7 +265,7 @@ footer {
 }
 
 .main-form {
-  width: 50%;
+  width: 100%;
 }
 
 /* Login form */
@@ -580,4 +585,22 @@ button:focus {
 .img-details{
 width: auto;
 height: auto;
+}
+
+
+/*********************************************
+				Search form
+*********************************************/
+
+.navbar-search {
+  width: 25rem;
+}
+
+.navbar-search input {
+  font-size: 0.85rem;
+  height: auto;
+}
+
+.input-group{
+  width: 100%;
 }

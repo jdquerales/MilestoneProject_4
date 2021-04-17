@@ -46,82 +46,99 @@
 <body>
 
   <div class="header-background">
-    <div id="nav" class="sticky-nav">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"> <a href="{% url 'home' %}" class="main-logo-link links">
-              <h2 class="logo-font">SmartTech.</h2>
-            </a></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <span> </span>
-            <span> </span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
 
-              {% if request.user.is_authenticated %}
-              {% if request.user.is_superuser %}
-              <li class="nav-item"></li>
-              <a href="" class="nav-link">Manage Store</a>
-              {% endif %}
-              <li class="nav-item">
-                <a href="{% url 'account_logout' %}" class="nav-link"> Logout </a>
-              </li>
-              {% else %}
-              <li class="nav-item">
-                <a href="{% url 'account_login' %}" class="nav-link"> Login </a>
-              </li>
-              <li class="nav-item">
-                <a href="{% url 'account_signup' %}" class="nav-link"> Register </a>
-              </li>
+    <div id="nav" class="sticky-nav row">
+      <div class="col-sm-12 col-md-9">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"> <a href="{% url 'home' %}" class="main-logo-link links">
+                <h2 class="logo-font">SmartTech.</h2>
+              </a></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <span> </span>
+              <span> </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
 
-              {% endif %}
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Our products
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="{% url 'products' %}">All products</a></li>
-                  <li><a class="dropdown-item" href="{% url 'products' %}?category=fitness">Fitness</a></li>
-                  <li><a class="dropdown-item" href="{% url 'products' %}?category=medical">Medical</a></li>
-                  <li><a class="dropdown-item" href="{% url 'products' %}?category=lifestyle">Lifestyle</a></li>
-                  <li><a class="dropdown-item" href="{% url 'products' %}?category=entertainment">Entertainment</a></li>
-                </ul>
-              </li>
+                {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                <li class="nav-item"></li>
+                <a href="" class="nav-link">Manage Store</a>
+                {% endif %}
+                <li class="nav-item">
+                  <a href="{% url 'account_logout' %}" class="nav-link"> Logout </a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                  <a href="{% url 'account_login' %}" class="nav-link"> Login </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'account_signup' %}" class="nav-link"> Register </a>
+                </li>
 
-              <li class="nav-item">
-                <a href="" class="nav-link"> Reviews </a>
-              </li>
+                {% endif %}
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Our products
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="{% url 'products' %}">All products</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=fitness">Fitness</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=medical">Medical</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=lifestyle">Lifestyle</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=entertainment">Entertainment</a>
+                    </li>
+                  </ul>
+                </li>
 
-              <li class="list-inline-item">
-                <span class="shopping-basket-icon">
-                  <i class="fas fa-shopping-basket"></i>
-                </span>
-              </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link"> Reviews </a>
+                </li>
 
-            </ul>
-            <form method="GET" action="{% url 'products' %}" class="d-flex  main-form">
-              <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+                <li class="list-inline-item">
+                  <span class="shopping-basket-icon">
+                    <i class="fas fa-shopping-basket"></i>
+                  </span>
+                </li>
+
+
+              </ul>
+
+
+            </div>
           </div>
-        </div>
-      </nav>
+
+        </nav>
+      </div>
+      <div class="col-sm-12 col-md-3 d-sm-inline-block form-inline mr-auto ml-md-3 my-2 mw-100">
+        <form method="GET" action="{% url 'products' %}" class="d-flex main-form">
+          <div class="input-group">
+            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+              aria-label="Search" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="submit">
+                <i class="fas fa-search fa-sm"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+
     </div>
+
     {% block content %}
     {% endblock %}
   </div>
 
-
   <header class="container-fluid fixed-top">
-
     <div class="row">
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-
       </div>
       <!--
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -140,11 +157,7 @@
                 </form>
             </div>
 -->
-
-
     </div>
-
-
   </header>
 
   {% if messages %}
