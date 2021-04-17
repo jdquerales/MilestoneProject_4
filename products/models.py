@@ -55,7 +55,7 @@ class Product(models.Model):
     brand = models.CharField(max_length=254, null=True, blank=True)
     origin = models.ForeignKey('Origin', null=True, blank=True, on_delete=models.SET_NULL)
     image = models.ImageField(null=True, blank=True)
-    stock = models.BooleanField(null=False, blank=True, default=False)
+    stock = models.BooleanField(null=False, blank=True, default=True)
 
     def __str__(self):
         return self.friendly_name
