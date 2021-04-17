@@ -576,3 +576,8 @@ button:focus {
 .service-image-left > center > img,.service-image-right > center > img{
 	max-height: 155px;
 }
+
+.img-details{
+width: auto;
+height: auto;
+}
