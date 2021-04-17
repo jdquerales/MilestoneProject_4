@@ -4,22 +4,34 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container-fluid">
-    <div class="row">
+    <div class="row" id="row-product">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <a href="{% url 'product_detail' product.id %}">
+                <img src="{{ MEDIA_URL }}{{product.image.url}}" class="card-img-top imag-fluid"
+                    alt="{{ product.friendly_name }}">
+                </a>
+        </div>
 
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <div class="row">
-                Our products
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-1">
+            <div class="product-title">{{ product.friendly_name }}</div>
+            <div class="product-desc">{{ product.description }}</div>
+            <div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
+            <hr>
+            <div class="product-price">€{{ product.price }}</div>
+            <div class="product-stock">In Stock</div>
+            <hr>
+            <div class="btn-group cart">
+                <button type="button" class="btn-success">
+                    Add to cart 
+                </button>
             </div>
-            <div class="row">
-
-                
+            <div class="btn-group wishlist">
+                <button type="button" class="btn-danger">
+                    Add to wishlist 
+                </button>
             </div>
         </div>
     </div>
-
 </div>
 
 
