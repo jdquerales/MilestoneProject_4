@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 18px;
-  background: url("/media/home2.jpeg") no-repeat center center fixed;
+  background: url("/media/home.jpeg") no-repeat center center fixed;
   background-size: cover;
   font-family: "Open Sans Condensed", sans-serif;
 }
@@ -55,9 +55,8 @@ a:hover {
   background-color: rgba(12, 32, 59, 0.5);
 }
 
-
-.navbar-toggler-icon{
-font-size: 50px;
+.navbar-toggler-icon {
+  font-size: 50px;
 }
 
 .navbar-toggler {
@@ -191,7 +190,6 @@ footer {
 
 .list-inline-item {
   margin-right: 20px;
-  margin-left: 20px;
 }
 
 .nav-bar-links {
@@ -458,48 +456,48 @@ button:focus {
         		Theme Elements
 *********************************************/
 
-.gold{
-	color: #FFBF00;
+.gold {
+  color: #ffbf00;
 }
 
 /*********************************************
 					PRODUCTS
 *********************************************/
 
-.product{
-	border: 1px solid #dddddd;
-	height: 321px;
+.product {
+  border: 1px solid #dddddd;
+  height: 321px;
 }
 
-.product>img{
-	max-width: 230px;
+.product > img {
+  max-width: 230px;
 }
 
-.product-rating{
-	font-size: 20px;
-	margin-bottom: 25px;
+.product-rating {
+  font-size: 20px;
+  margin-bottom: 25px;
 }
 
-.product-title{
-	font-size: 20px;
+.product-title {
+  font-size: 20px;
 }
 
-.product-desc{
-	font-size: 14px;
+.product-desc {
+  font-size: 14px;
 }
 
-.product-price{
-	font-size: 22px;
+.product-price {
+  font-size: 22px;
 }
 
-.product-stock{
-	color: #74DF00;
-	font-size: 20px;
-	margin-top: 10px;
+.product-stock {
+  color: #74df00;
+  font-size: 20px;
+  margin-top: 10px;
 }
 
-.product-info{
-		margin-top: 50px;
+.product-info {
+  margin-top: 50px;
 }
 
 /*********************************************
@@ -507,29 +505,29 @@ button:focus {
 *********************************************/
 
 .content-wrapper {
-	max-width: 1140px;
-	background: #fff;
-	margin: 0 auto;
-	margin-top: 25px;
-	margin-bottom: 10px;
-	border: 0px;
-	border-radius: 0px;
+  max-width: 1140px;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border: 0px;
+  border-radius: 0px;
 }
 
-.container-fluid{
-	margin: 0 auto;
+.container-fluid {
+  margin: 0 auto;
 }
 
 .view-wrapper {
-	float: right;
-	max-width: 70%;
-	margin-top: 25px;
+  float: right;
+  max-width: 70%;
+  margin-top: 25px;
 }
 
 .container {
-	padding-left: 0px;
-	padding-right: 0px;
-	max-width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+  max-width: 100%;
 }
 
 #row-product {
@@ -540,59 +538,59 @@ button:focus {
 *********************************************/
 
 .service1-items {
-	padding: 0px 0 0px 0;
-	float: left;
-	position: relative;
-	overflow: hidden;
-	max-width: 100%;
-	height: 321px;
-	width: 130px;
+  padding: 0px 0 0px 0;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  height: 321px;
+  width: 130px;
 }
 
 .service1-item {
-	height: 107px;
-	width: 120px;
-	display: block;
-	float: left;
-	position: relative;
-	padding-right: 20px;
-	border-right: 1px solid #DDD;
-	border-top: 1px solid #DDD;
-	border-bottom: 1px solid #DDD;
+  height: 107px;
+  width: 120px;
+  display: block;
+  float: left;
+  position: relative;
+  padding-right: 20px;
+  border-right: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .service1-item > img {
-	max-height: 110px;
-	max-width: 110px;
-	opacity: 0.6;
-	transition: all .2s ease-in;
-	-o-transition: all .2s ease-in;
-	-moz-transition: all .2s ease-in;
-	-webkit-transition: all .2s ease-in;
+  max-height: 110px;
+  max-width: 110px;
+  opacity: 0.6;
+  transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
 }
 
 .service1-item > img:hover {
-	cursor: pointer;
-	opacity: 1;
+  cursor: pointer;
+  opacity: 1;
 }
 
 .service-image-left {
-	padding-right: 50px;
+  padding-right: 50px;
 }
 
 .service-image-right {
-	padding-left: 50px;
+  padding-left: 50px;
 }
 
-.service-image-left > center > img,.service-image-right > center > img{
-	max-height: 155px;
+.service-image-left > center > img,
+.service-image-right > center > img {
+  max-height: 155px;
 }
 
-.img-details{
-width: auto;
-height: auto;
+.img-details {
+  width: auto;
+  height: auto;
 }
-
 
 /*********************************************
 				Search form
@@ -607,7 +605,7 @@ height: auto;
   height: auto;
 }
 
-.input-group{
+.input-group {
   width: 100%;
 }
 
