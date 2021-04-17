@@ -18,8 +18,10 @@
                 <div class="col">
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                         <div class="card border-5" style="width: 18rem;">
+                            <a href="{% url 'product_detail' product.id %}">
                             <img src="{{ MEDIA_URL }}{{product.image.url}}" class="card-img-top imag-fluid"
                                 alt="{{ product.friendly_name }}">
+                            </a>
                             <div class="card-body">
                                 <p class="card-text">{{ product.friendly_name }}</p>
                                 <p class="font-weight-bold">€{{ product.price }}</p>
