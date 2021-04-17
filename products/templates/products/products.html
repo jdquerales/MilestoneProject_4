@@ -20,8 +20,8 @@
                         <div class="card border-5" style="width: 18rem;">
                             {% if product.image %}
                             <a href="{% url 'product_detail' product.id %}">
-                            <img src="{{ MEDIA_URL }}{{product.image.url}}" class="card-img-top imag-fluid"
-                                alt="{{ product.friendly_name }}">
+                                <img src="{{ MEDIA_URL }}{{product.image.url}}" class="card-img-top imag-fluid"
+                                    alt="{{ product.friendly_name }}">
                             </a>
                             {% else %}
                             <a href="{% url 'product_detail' product.id %}">
@@ -30,8 +30,8 @@
                             </a>
                             {% endif %}
                             <div class="card-body">
-                                <p class="card-text">{{ product.friendly_name }}</p>  
-                                <p class="card-text"><i class="fas fa-map-pin"></i> {{ product.origin|capfirst }}</p>  
+                                <p class="card-text">{{ product.friendly_name }}</p>
+                                <p class="card-text"><i class="fas fa-map-pin"></i> {{ product.origin|capfirst }}</p>
                                 <p class="font-weight-bold"><span class="badge rounded-pill bg-light text-dark">€{{ product.price }}</span></p>
                             </div>
                             {% if product.stock %}
@@ -40,7 +40,8 @@
                             </div>
                             {% else %}
                             <div class="card-body">
-                                <h2><span class="badge bg-danger"><i class="fas fa-exclamation-circle"></i> Out-of-stock</span></h2>
+                                <h2><span class="badge bg-danger"><i class="fas fa-exclamation-circle"></i>
+                                        Out-of-stock</span></h2>
                             </div>
                             {% endif %}
                         </div>
