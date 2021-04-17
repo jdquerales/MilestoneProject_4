@@ -27,11 +27,11 @@
             <div class="product-price">€{{ product.price }}</div>
             {% if product.stock %}
             <div class="card-body">
-                <h2><span class="badge bg-success">In Stock</span></h2>
+                <h2><span class="badge bg-success"><i class="fas fa-check"></i> In Stock</span></h2>
             </div>
             {% else %}
             <div class="card-body">
-                <h2><span class="badge bg-danger">Out-of-stock</span></h2>
+                <h2><span class="badge bg-danger"><i class="fas fa-exclamation-circle"></i> Out-of-stock</span></h2>
             </div>
             {% endif %}
             <hr>

@@ -448,6 +448,10 @@ button:focus {
   font-size: 30px;
 }
 
+.font-weight-bold-login {
+  text-align: center;
+}
+
 /* Product details page */
 /*********************************************
         		Theme Elements
