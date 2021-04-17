@@ -54,7 +54,7 @@ class Product(models.Model):
     body_location= models.ForeignKey('Location', null=True, blank=True, on_delete=models.SET_NULL)
     brand = models.CharField(max_length=254, null=True, blank=True)
     origin = models.ForeignKey('Origin', null=True, blank=True, on_delete=models.SET_NULL)
-    image = models.ImageField(null=True, blank = True)
+    image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.friendly_name
