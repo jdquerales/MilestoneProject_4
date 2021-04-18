@@ -31,6 +31,7 @@
                             {% endif %}
                             <div class="card-body">
                                 <p class="card-text">{{ product.friendly_name }}</p>
+                                <p class="card-text"><i class="fas fa-tags"></i> {{ product.category|capfirst }}</p>
                                 <p class="card-text"><i class="fas fa-map-pin"></i> {{ product.origin|capfirst }}</p>
                                 <p class="font-weight-bold"><span class="badge rounded-pill bg-light text-dark">€{{ product.price }}</span></p>
                             </div>
