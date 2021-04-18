@@ -640,3 +640,22 @@ button:focus {
   color: white;
   margin: 2px 2px 2px 2px;
 }
+
+
+.btt-button {
+  height: 42px;
+  width: 42px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+  cursor: pointer;
+}
+
+.border-black {
+  border: 1px solid black !important;
+}
