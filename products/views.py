@@ -15,6 +15,7 @@ def all_products(request):
     categories = None
     sort = None
     ordering = None
+    limit = None
 
     if request.GET:
         if 'sort' in request.GET:
