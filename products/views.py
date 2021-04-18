@@ -24,7 +24,8 @@ def all_products(request):
             if sortkey == 'friendly_name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('friendly_name'))
-
+            if sortkey == 'category':
+                sortkey = 'category__name'
             if 'ordering' in request.GET:
                 ordering = request.GET['ordering']
                 if ordering == 'desc':
