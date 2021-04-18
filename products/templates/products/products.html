@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <div class="row">
            <div class="col-lg-6">
-               Products
+               Products: {{ products|length }}
            </div>
            <div class="col-lg-6">
             <div class="dropdown">
@@ -16,9 +16,12 @@
                   Sort by
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&order=asc">Price</a></li>
-                  <li><a class="dropdown-item" href="{% url 'products' %}?sort=category&order=asc">Category</a></li>
-                  <li><a class="dropdown-item" href="{% url 'products' %}?sort=name&order=asc">Name</a></li>
+                  <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&ordering=asc">Price (ascending)</a></li>
+                  <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&ordering=desc">Price (descending)</a></li>
+                  <li><a class="dropdown-item" href="{% url 'products' %}?sort=category&ordering=asc">Category (A-Z)</a></li>
+                  <li><a class="dropdown-item" href="{% url 'products' %}?sort=category&ordering=desc">Category (Z-A)</a></li>
+                  <li><a class="dropdown-item" href="{% url 'products' %}?sort=friendly_name&ordering=asc">Name (A-Z)</a></li>
+                  <li><a class="dropdown-item" href="{% url 'products' %}?sort=friendly_name&ordering=desc">Name (Z-A)</a></li>
                 </ul>
               </div>
            </div>
