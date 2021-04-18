@@ -4,15 +4,29 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container-fluid">
-    <div class="row">
 
-    </div>
+    <div class="container-fluid">
+        <div class="row">
+           <div class="col-lg-6">
+               Products
+           </div>
+           <div class="col-lg-6">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Sort by
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&order=asc">Price</a></li>
+                  <li><a class="dropdown-item" href="{% url 'products' %}?sort=category&order=asc">Category</a></li>
+                  <li><a class="dropdown-item" href="{% url 'products' %}?sort=name&order=asc">Name</a></li>
+                </ul>
+              </div>
+           </div>
+        </div>
+        </div>
 
     <div class="row">
         <div class="col">
-            <div class="row">
-                Our products
-            </div>
             <div class="row">
                 {% for product in products %}
                 <div class="col">
