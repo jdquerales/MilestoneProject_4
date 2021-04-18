@@ -1,59 +1,73 @@
-{% extends "account/base.html" %}
+{% extends "account/base.html" %} {% load i18n %} {% load account socialaccount
+%} {% block head_title %}{% trans "Sign In" %}{% endblock %} {% block content %}
 
-{% load i18n %}
-{% load account socialaccount %}
-
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
-
-{% block content %}
-
-<div class="container-fluid header-background px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+<div
+  class="container-fluid header-background px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto"
+>
   <div class="card-login card0 border-0">
     <div class="row d-flex">
       <div class="col-lg-12">
         <div class="card2 card-login border-0 px-4 py-5">
           <div class="row mb-4 px-3">
             <h6 class="mb-0 mr-4 mt-2">Sign in with</h6>
-            {% get_providers as socialaccount_providers %}
-
-            {% if socialaccount_providers %}
+            {% get_providers as socialaccount_providers %} {% if
+            socialaccount_providers %}
 
             <div class="socialaccount_ballot">
-
               <ul class="socialaccount_providers">
-                {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+                {% include "socialaccount/snippets/provider_list.html" with
+                process="login" %}
               </ul>
 
               <div class="row px-3 mb-4">
-                <div class="line"></div> <small class="or text-center">Or</small>
+                <div class="line"></div>
+                <small class="or text-center">Or</small>
                 <div class="line"></div>
               </div>
-
             </div>
 
-            {% include "socialaccount/snippets/login_extra.html" %}
-
-            {% else %}
-            <p>{% blocktrans %}If you have not created an account yet, then please
-              <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}
+            {% include "socialaccount/snippets/login_extra.html" %} {% else %}
+            <p>
+              {% blocktrans %}If you have not created an account yet, then
+              please <a href="{{ signup_url }}">sign up</a> first.{%
+              endblocktrans %}
             </p>
             {% endif %}
-            <form class="login" method="POST" action="{% url 'account_login' %}">
-              {% csrf_token %}
-              {{ form.as_p }}
-              {% if redirect_field_value %}
-              <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            <form
+              class="login"
+              method="POST"
+              action="{% url 'account_login' %}"
+            >
+              {% csrf_token %} {{ form.as_p }} {% if redirect_field_value %}
+              <input
+                type="hidden"
+                name="{{ redirect_field_name }}"
+                value="{{ redirect_field_value }}"
+              />
               {% endif %}
 
-              <button class="btn btn-blue text-center" type="submit">{% trans "Sign In" %}</button>
+              <button class="btn btn-blue text-center" type="submit">
+                {% trans "Sign In" %}
+              </button>
             </form>
 
-            <div class="row mb-4 px-3"> <small class="font-weight-bold"> <a class="text-danger links"
-                  href="{% url 'account_reset_password' %}">Forgot Password?</a></small>
+            <div class="row mb-4 px-3">
+              <small class="font-weight-bold">
+                <a
+                  class="text-danger links"
+                  href="{% url 'account_reset_password' %}"
+                  >Forgot Password?</a
+                ></small
+              >
             </div>
 
-            <div class="row mb-4 px-3"> <small class="font-weight-bold-login">Don't have an account? <a
-                  class="text-danger links" href="{{ signup_url }}">Register</a></small>
+            <div class="row mb-4 px-3">
+              <small class="font-weight-bold-login"
+                >Don't have an account?
+                <a class="text-danger links" href="{{ signup_url }}"
+                  >Register</a
+                ></small
+              >
             </div>
           </div>
         </div>

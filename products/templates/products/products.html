@@ -1,99 +1,150 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block content %}
 <div class="overlay"></div>
 <div class="container-fluid">
-
-    <div class="container-fluid">
-        <div class="row" id="sorting-row">
-           <div class="col-lg-6  d-flex justify-content-center sorting-column">
-              <h3 class="nav-item"> {{ products|length }} Products </h3>
-           </div>
-           <div class="col-lg-6  d-flex justify-content-center sorting-column">
-            <div class="dropdown">
-                <button class="btn-sorting btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Sort by
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&ordering=asc">Price (ascending)</a></li>
-                  <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&ordering=desc">Price (descending)</a></li>
-                  <li><a class="dropdown-item" href="{% url 'products' %}?sort=category&ordering=asc">Category (A-Z)</a></li>
-                  <li><a class="dropdown-item" href="{% url 'products' %}?sort=category&ordering=desc">Category (Z-A)</a></li>
-                  <li><a class="dropdown-item" href="{% url 'products' %}?sort=friendly_name&ordering=asc">Name (A-Z)</a></li>
-                  <li><a class="dropdown-item" href="{% url 'products' %}?sort=friendly_name&ordering=desc">Name (Z-A)</a></li>
-                </ul>
-              </div>
-           </div>
+  <div class="container-fluid">
+    <div class="row" id="sorting-row">
+      <div class="col-lg-6 d-flex justify-content-center sorting-column">
+        <h3 class="nav-item">{{ products|length }} Products</h3>
+      </div>
+      <div class="col-lg-6 d-flex justify-content-center sorting-column">
+        <div class="dropdown">
+          <button
+            class="btn-sorting btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Sort by
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <a
+                class="dropdown-item"
+                href="{% url 'products' %}?sort=price&ordering=asc"
+                >Price (ascending)</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="{% url 'products' %}?sort=price&ordering=desc"
+                >Price (descending)</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="{% url 'products' %}?sort=category&ordering=asc"
+                >Category (A-Z)</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="{% url 'products' %}?sort=category&ordering=desc"
+                >Category (Z-A)</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="{% url 'products' %}?sort=friendly_name&ordering=asc"
+                >Name (A-Z)</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="{% url 'products' %}?sort=friendly_name&ordering=desc"
+                >Name (Z-A)</a
+              >
+            </li>
+          </ul>
         </div>
-        </div>
-
-    <div class="row">
-        <div class="col">
-            <div class="row">
-                {% for product in products %}
-                <div class="col">
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card border-5" style="width: 18rem;">
-                            {% if product.image %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img src="{{ MEDIA_URL }}{{product.image.url}}" class="card-img-top imag-fluid"
-                                    alt="{{ product.friendly_name }}">
-                            </a>
-                            {% else %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top imag-fluid"
-                                    alt="{{ product.friendly_name }}">
-                            </a>
-                            {% endif %}
-                            <div class="card-body">
-                                <p class="card-text">{{ product.friendly_name }}</p>
-                            {% if product.category %}
-                                <p class="card-text"><i class="fas fa-tags"></i> {{ product.category|capfirst }}</p>
-                            {% endif %}
-                            {% if product.origin %}
-                                <p class="card-text"><i class="fas fa-map-pin"></i> {{ product.origin|capfirst }}</p>
-                            {% endif %}
-                                <p class="font-weight-bold"><span class="badge rounded-pill bg-light text-dark">€{{ product.price }}</span></p>
-                            </div>
-                            {% if product.stock %}
-                            <div class="card-body">
-                                <h2><span class="badge bg-success"><i class="fas fa-check"></i> In Stock</span></h2>
-                            </div>
-                            {% else %}
-                            <div class="card-body">
-                                <h2><span class="badge bg-danger"><i class="fas fa-exclamation-circle"></i>
-                                        Out-of-stock</span></h2>
-                            </div>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 
+  <div class="row">
+    <div class="col">
+      <div class="row">
+        {% for product in products %}
+        <div class="col">
+          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card border-5" style="width: 18rem">
+              {% if product.image %}
+              <a href="{% url 'product_detail' product.id %}">
+                <img
+                  src="{{ MEDIA_URL }}{{product.image.url}}"
+                  class="card-img-top imag-fluid"
+                  alt="{{ product.friendly_name }}"
+                />
+              </a>
+              {% else %}
+              <a href="{% url 'product_detail' product.id %}">
+                <img
+                  src="{{ MEDIA_URL }}noimage.png"
+                  class="card-img-top imag-fluid"
+                  alt="{{ product.friendly_name }}"
+                />
+              </a>
+              {% endif %}
+              <div class="card-body">
+                <p class="card-text">{{ product.friendly_name }}</p>
+                {% if product.category %}
+                <p class="card-text">
+                  <i class="fas fa-tags"></i> {{ product.category|capfirst }}
+                </p>
+                {% endif %} {% if product.origin %}
+                <p class="card-text">
+                  <i class="fas fa-map-pin"></i> {{ product.origin|capfirst }}
+                </p>
+                {% endif %}
+                <p class="font-weight-bold">
+                  <span class="badge rounded-pill bg-light text-dark"
+                    >€{{ product.price }}</span
+                  >
+                </p>
+              </div>
+              {% if product.stock %}
+              <div class="card-body">
+                <h2>
+                  <span class="badge bg-success"
+                    ><i class="fas fa-check"></i> In Stock</span
+                  >
+                </h2>
+              </div>
+              {% else %}
+              <div class="card-body">
+                <h2>
+                  <span class="badge bg-danger"
+                    ><i class="fas fa-exclamation-circle"></i>
+                    Out-of-stock</span
+                  >
+                </h2>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="btt-button shadow-sm rounded-0 border border-black">
-    <a class="btt-link d-flex h-100">
-        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
-    </a>
+  <a class="btt-link d-flex h-100">
+    <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+  </a>
 </div>
 
-{% endblock %}
-
-
-{% block postloadjs %}
-
-{{ block.super }}
+{% endblock %} {% block postloadjs %} {{ block.super }}
 <script type="text/javascript">
-    $('.btt-link').click(function (e) {
-        window.scrollTo(0, 0)
-    }
-    )
+  $(".btt-link").click(function (e) {
+    window.scrollTo(0, 0);
+  });
 </script>
-
 
 {% endblock %}
