@@ -26,8 +26,12 @@
                     class="fa fa-star gold"></i><i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
             <hr>
             <div class="product-price">€{{ product.price }}</div>
+            {% if product.category %}
             <div class="product-price"><i class="fas fa-tags"></i> {{ product.category|capfirst }}</div>
+            {% endif %}
+            {% if product.origin %}
             <div class="product-price"><i class="fas fa-map-pin"></i> {{ product.origin|capfirst }}</div>
+            {% endif %}
             {% if product.stock %}
             <div class="card-body">
                 <h2><span class="badge bg-success"><i class="fas fa-check"></i> In Stock</span></h2>

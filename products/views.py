@@ -61,7 +61,6 @@ def all_products(request):
 
 def product_detail(request, product_id):
     """ A view to retrieve a particular product by its id"""
-
     product = get_object_or_404(Product, pk=product_id)
     # to get a particular product by id
 
