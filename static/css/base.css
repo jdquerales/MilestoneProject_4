@@ -99,6 +99,24 @@ a:hover {
   border-color: #d3b3ac;
 }
 
+.btn-sorting {
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+.sorting-row{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sorting-column{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
 footer {
   background-color: black;
   max-height: auto;
