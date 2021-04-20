@@ -19,7 +19,14 @@
 
         {% else %}
         <p class="lead mb-5">Your shopping cart is empty.</p>
-
+        <a class="links" href="{% url 'products' %}">
+            <span>
+                <i class="fas fa-arrow-circle-left navegation-arrows"></i>
+            </span>
+            <span class="text-uppercase">
+                Go back to store
+            </span>
+        </a>
         {% endif %}
     </div>
 </div>
