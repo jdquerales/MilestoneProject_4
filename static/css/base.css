@@ -673,3 +673,7 @@ button:focus {
   padding: 0px 0px 0px 0px;
   font-size: 15px;
 }
+
+.badge-footer {
+  font-size: 25px;
+}
