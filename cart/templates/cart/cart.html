@@ -3,4 +3,25 @@
 
 {% block content %}
 
+<div class="overlay"></div>
+
+<div class="container mb-2" id="shopping-cart">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 mb-4>Shopping Cart</h2>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        {% if cart_items %}
+
+        {% else %}
+        <p class="lead mb-5">Your shopping cart is empty.</p>
+
+        {% endif %}
+    </div>
+</div>
+
 {% endblock %}

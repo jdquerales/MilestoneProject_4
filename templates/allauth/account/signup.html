@@ -1,5 +1,8 @@
-{% extends "account/base.html" %} {% load i18n %} {% block head_title %}{% trans
-"Signup" %}{% endblock %} {% block content %}
+{% extends "account/base.html" %} 
+{% load i18n %} 
+{% block head_title %}{% trans "Signup" %}{% endblock %} 
+
+{% block content %}
 
 <div
   class="container-fluid header-background px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto"
@@ -12,8 +15,7 @@
             <h1>{% trans "Sign Up" %}</h1>
             <p>
               {% blocktrans %}Already have an account? Then please
-              <a href="{{ login_url }}" class="text-danger links">sign in</a>.{%
-              endblocktrans %}
+              <a href="{{ login_url }}" class="text-danger links">sign in</a>.{% endblocktrans %}
             </p>
             <form
               class="signup"
@@ -21,7 +23,8 @@
               method="post"
               action="{% url 'account_signup' %}"
             >
-              {% csrf_token %} {{ form.as_p }} {% if redirect_field_value %}
+              {% csrf_token %} {{ form.as_p }} 
+              {% if redirect_field_value %}
               <input
                 type="hidden"
                 name="{{ redirect_field_name }}"

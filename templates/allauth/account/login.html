@@ -1,6 +1,11 @@
-{% extends "account/base.html" %} {% load i18n %} {% load account socialaccount
-%} {% block head_title %}{% trans "Sign In" %}{% endblock %} {% block content %}
+{% extends "account/base.html" %}
 
+{% load i18n %} 
+{% load account socialaccount%} 
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %} 
+
+{% block content %}
 <div
   class="container-fluid header-background px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto"
 >
@@ -10,13 +15,11 @@
         <div class="card2 card-login border-0 px-4 py-5">
           <div class="row mb-4 px-3">
             <h6 class="mb-0 mr-4 mt-2">Sign in with</h6>
-            {% get_providers as socialaccount_providers %} {% if
-            socialaccount_providers %}
-
+            {% get_providers as socialaccount_providers %} 
+            {% if socialaccount_providers %}
             <div class="socialaccount_ballot">
               <ul class="socialaccount_providers">
-                {% include "socialaccount/snippets/provider_list.html" with
-                process="login" %}
+                {% include "socialaccount/snippets/provider_list.html" with process="login" %}
               </ul>
 
               <div class="row px-3 mb-4">
@@ -25,12 +28,12 @@
                 <div class="line"></div>
               </div>
             </div>
-
-            {% include "socialaccount/snippets/login_extra.html" %} {% else %}
+            {% include "socialaccount/snippets/login_extra.html" %} 
+            {% else %}
             <p>
               {% blocktrans %}If you have not created an account yet, then
-              please <a href="{{ signup_url }}">sign up</a> first.{%
-              endblocktrans %}
+              please <a href="{{ signup_url }}">sign up</a> first.
+              {% endblocktrans %}
             </p>
             {% endif %}
             <form
@@ -75,5 +78,4 @@
     </div>
   </div>
 </div>
-
 {% endblock %}

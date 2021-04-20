@@ -659,3 +659,7 @@ button:focus {
 .border-black {
   border: 1px solid black !important;
 }
+
+#shopping-cart{
+  width: 80%;
+}
