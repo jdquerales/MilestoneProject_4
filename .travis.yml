@@ -11,9 +11,7 @@ install:
 # Run the unit test 
 script:
     - SECRET_KEY="placeholdersecretkey" python3 manage.py test
-    - SECRET_KEY="placeholdersecretkey" coverage run --source=wearable_tech manage.py test
-    - SECRET_KEY="placeholdersecretkey" coverage run --source=home manage.py test
-    - SECRET_KEY="placeholdersecretkey" coverage run --source=products manage.py test
+    - SECRET_KEY="placeholdersecretkey" coverage run manage.py test
 # Push the results back to codecov
 after_success:
     - codecov
