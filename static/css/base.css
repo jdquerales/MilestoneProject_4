@@ -202,7 +202,7 @@ footer {
 }
 
 .shopping-basket-icon {
-  font-size: 30px;
+  font-size: 20px;
   color: #f05f40;
   margin: 0px 0px 0px 0px;
 }
@@ -666,4 +666,10 @@ button:focus {
 
 .navegation-arrows{
   font-size: 40px;
+}
+
+.p-basket {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  font-size: 15px;
 }

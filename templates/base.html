@@ -108,11 +108,22 @@
                     <a href="{% url 'view_cart' %}">
                   <span class="shopping-basket-icon"> <span class="badge rounded-pill bg-warning">
                     <i class="fas fa-shopping-basket"></i>
+                    <p class="p-basket">
+                    {% if product_count %}
+                    ${{ product_count }}
+                    {% else %}
+                    0
+                    {% endif %}
+                    items selected
+                  </p>
+                  <p class="p-basket">
+                    Total:
                     {% if grand_total %}
                     ${{ grand_total|floatformat:2 }}
                     {% else %}
                     €0.00
                     {% endif %}
+                  </p>
                   </span></span>
                 </a>
                 </li>
@@ -187,7 +198,7 @@
   <footer>
     <div class="row container-fluid">
       <div class="col-lg-4 col-md-4 text-center">
-        <p class="text-white-uppercase lead">+1 123456789</p>
+        <p class="text-white-uppercase lead">GET IN TOUCH: +1 123456789</p>
       </div>
 
       <div class="col-lg-4 col-md-4 text-center">
