@@ -63,6 +63,8 @@
       <hr />
 
       <div class="container-fluid">
+      <form class="form" action="" method="POST">
+        {% csrf_token %}
         <div class="row">
           <h2>Qty:</h2>
 
@@ -102,7 +104,9 @@
               </div>
             </div>
           </div>
+          <input type="hidden" name="redirect_url" value="{{ request.path }}">
         </div>
+      </form>
       </div>
 
       {% if product.stock %}
