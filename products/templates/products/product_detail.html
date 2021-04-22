@@ -63,7 +63,7 @@
       <hr />
 
       <div class="container-fluid">
-      <form class="form" action="" method="POST">
+      <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
         {% csrf_token %}
         <div class="row">
           <h2>Qty:</h2>
@@ -106,30 +106,32 @@
           </div>
           <input type="hidden" name="redirect_url" value="{{ request.path }}">
         </div>
+
+        {% if product.stock %}
+        <div class="btn-group cart">
+          <button type="submit" class="btn-success">Add to cart</button>
+        </div>
+        {% else %}
+        <div class="btn-group cart" id="wrapper-disabled">
+          <div id="overlay-disabled"></div>
+          <button
+            type="button"
+            class="btn-disabled"
+            id="disabled-button"
+            disabled
+          >
+            Add to cart
+          </button>
+        </div>
+        {% endif %}
+        <div class="btn-group wishlist">
+          <button type="button" class="btn-danger">Add to wishlist</button>
+        </div>
+      </div>
       </form>
       </div>
 
-      {% if product.stock %}
-      <div class="btn-group cart">
-        <button type="button" class="btn-success">Add to cart</button>
-      </div>
-      {% else %}
-      <div class="btn-group cart" id="wrapper-disabled">
-        <div id="overlay-disabled"></div>
-        <button
-          type="button"
-          class="btn-disabled"
-          id="disabled-button"
-          disabled
-        >
-          Add to cart
-        </button>
-      </div>
-      {% endif %}
-      <div class="btn-group wishlist">
-        <button type="button" class="btn-danger">Add to wishlist</button>
-      </div>
-    </div>
+
   </div>
 </div>
 
