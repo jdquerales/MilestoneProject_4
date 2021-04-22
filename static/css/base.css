@@ -677,3 +677,8 @@ button:focus {
 .badge-footer {
   font-size: 25px;
 }
+
+.btn-group {
+  font-size: 30px;
+  margin-top: 15px;
+}
