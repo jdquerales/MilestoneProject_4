@@ -140,11 +140,16 @@
   </a>
 </div>
 
-{% endblock %} {% block postloadjs %} {{ block.super }}
+{% endblock %} 
+
+{% block postloadjs %}
+{{ block.super }}
 <script type="text/javascript">
   $(".btt-link").click(function (e) {
     window.scrollTo(0, 0);
   });
 </script>
+
+{% include 'includes/main_js.html' %} 
 
 {% endblock %}

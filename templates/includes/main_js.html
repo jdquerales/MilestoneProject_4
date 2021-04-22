@@ -1,0 +1,20 @@
+<script type="text/javascript">
+  var showText = function (target, message, index, interval) {
+    if (index < message.length) {
+      $(target).append(message[index++]);
+      setTimeout(function () {
+        showText(target, message, index, interval);
+      }, interval);
+    }
+  };
+
+  $(function () {
+    showText("#message", "We provide Smart Control Solutions!", 0, 100);
+  });
+</script>
+
+<script type="text/javascript">
+  $("#target").keydown(function () {
+    $("#target").css("background-color", "#FED8b1");
+  });
+</script>

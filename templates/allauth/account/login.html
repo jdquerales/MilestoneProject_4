@@ -79,3 +79,8 @@
   </div>
 </div>
 {% endblock %}
+
+{% block postloadjs %}
+{{ block.super }} 
+  {% include 'includes/main_js.html' %} 
+{% endblock %}
