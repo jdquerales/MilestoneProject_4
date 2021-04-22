@@ -15,3 +15,8 @@ class TestViews(TestCase):
         response = self.client.get('/cart/')
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'cart/cart.html')
+
+    def test_get_add_to_cart_page(self):
+        product = Product.objects.get(pk=1)
+        response = self.client.post(f'/cart/add/{product.id}/', {'quantity':'1', 'redirect_url':f'/products/{product.id}'})
+        self.assertRedirects(response, f'/products/{product.id}')
