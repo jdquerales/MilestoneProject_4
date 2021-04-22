@@ -695,3 +695,8 @@ button:focus {
   height: 20px;
   width: 70px;
 }​
+
+#search-button {
+  display: none;
+}
+

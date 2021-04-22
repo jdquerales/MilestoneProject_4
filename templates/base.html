@@ -140,9 +140,9 @@
       <div class="col-sm-12 col-md-3 d-sm-inline-block form-inline mr-auto ml-md-3 my-2 mw-100">
         <form method="GET" action="{% url 'products' %}" class="d-flex main-form">
           <div class="input-group">
-            <input type="text" class="form-control bg-light border-0 small" name="search" placeholder="Search for..."
-              aria-label="Search" aria-describedby="basic-addon2">
-            <div class="input-group-append">
+            <input type="text" class="form-control border-0 small" name="search" placeholder="What are you looking for?"
+              aria-label="Search" aria-describedby="basic-addon2" id="target">
+            <div class="input-group-append" id="search-button">
               <button class="btn btn-primary" type="submit">
                 <i class="fas fa-search fa-sm"></i>
               </button>
@@ -155,6 +155,8 @@
     </div>
 
     {% block content %}
+
+
     {% endblock %}
   </div>
 
@@ -191,6 +193,8 @@
 
 
   {% block postloadjs %}
+
+
 
   {% endblock %}
 
