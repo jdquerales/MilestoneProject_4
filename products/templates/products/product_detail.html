@@ -37,11 +37,13 @@
       <div class="product-price">
         <i class="fas fa-tags"></i> {{ product.category|capfirst }}
       </div>
-      {% endif %} {% if product.origin %}
+      {% endif %} 
+      {% if product.origin %}
       <div class="product-price">
         <i class="fas fa-map-pin"></i> {{ product.origin|capfirst }}
       </div>
-      {% endif %} {% if product.stock %}
+      {% endif %} 
+      {% if product.stock %}
       <div class="card-body">
         <h2>
           <span class="badge bg-success"
@@ -91,9 +93,16 @@
         </div>
       </div>
 
+      {% if product.stock %}
       <div class="btn-group cart">
         <button type="button" class="btn-success">Add to cart</button>
       </div>
+      {% else %}
+      <div class="btn-group cart" id="wrapper-disabled">
+        <div id="overlay-disabled"></div>
+        <button type="button" class="btn-disabled" id="disabled-button" disabled >Add to cart</button>
+      </div>
+      {% endif %}
       <div class="btn-group wishlist">
         <button type="button" class="btn-danger">Add to wishlist</button>
       </div>

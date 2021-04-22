@@ -682,3 +682,16 @@ button:focus {
   font-size: 30px;
   margin-top: 15px;
 }
+
+#wrapper-disabled{
+  position: relative;
+}
+
+.overlay-disabled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .1;
+  height: 20px;
+  width: 70px;
+}​

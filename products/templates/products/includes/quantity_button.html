@@ -41,4 +41,12 @@
        var itemId = $(this).data('item_id');
        handleEnableDisable(itemId);
     });
+
+
+    // Disabled add to cart button
+    $('#disabled-button').hover(function(){
+    $(this).css("background-color", "yellow");
+    }, function(){
+     $(this).css("background-color", "pink");
+    });
 </script>
