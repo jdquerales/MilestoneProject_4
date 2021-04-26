@@ -130,6 +130,11 @@ footer {
   color: whitesmoke;
 }
 
+.text-uppercase-blue {
+  text-transform: uppercase;
+  color: #11426e;
+}
+
 .logo-font {
   font-family: "Dancing Script", cursive;
   color: #ff7b7b;
@@ -422,6 +427,11 @@ button:focus {
   cursor: pointer;
 }
 
+.bg-shopping-cart {
+  background-color: #FECC67;
+  color: #11426e;
+}
+
 .bg-blue {
   color: #fff;
   background-color: #1a237e;
@@ -666,6 +676,7 @@ button:focus {
 
 .navegation-arrows{
   font-size: 40px;
+  color: #11426e;
 }
 
 .p-basket {
