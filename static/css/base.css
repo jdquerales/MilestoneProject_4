@@ -242,7 +242,7 @@ footer {
 /* Base html heading */
 
 .heading {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 300;
   line-height: 1.4;
   text-align: center;
@@ -363,7 +363,7 @@ footer {
 
 .or {
   width: 10%;
-  font-weight: bold;
+  font-weight: 300;
 }
 
 .text-sm {
@@ -691,7 +691,7 @@ button:focus {
 }
 
 .btn-group {
-  font-size: 30px;
+  font-size: 20px;
   margin-top: 15px;
 }
 
