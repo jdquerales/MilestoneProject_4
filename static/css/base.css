@@ -13,7 +13,7 @@ body {
 }
 
 a {
-  color: #ff7b7b;
+  color: #fff;
   font-weight: 500;
   font-size: 18px;
 }
@@ -52,7 +52,7 @@ a:hover {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
-  background-color: rgba(12, 32, 59, 0.5);
+  background-color: rgba(17, 66, 110, 0.9);
 }
 
 .navbar-toggler-icon {
