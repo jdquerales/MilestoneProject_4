@@ -16,7 +16,7 @@
 
     <div class="row">
         {% if cart_items %}
-
+            {{ cart_items }}
         {% else %}
         <p class="lead mb-5">Your shopping cart is empty.</p>
         <a class="links" href="{% url 'products' %}">
