@@ -31,3 +31,10 @@ class TestViews(TestCase):
                                     'redirect_url':f'/products/{product.id}'})
         self.assertRedirects(response, f'/products/{product.id}')
 
+    def test_remove_from_cart_view(self):
+        product = Product.objects.get(pk=1)
+        response1 = self.client.post(f'/cart/add/{product.id}/',
+                                    {'quantity':'1', 
+                                    'redirect_url':f'/products/{product.id}'})
+        response2 = self.client.get(f'/cart/remove/{product.id}/')
+        self.assertEquals(response2.status_code, 200)
