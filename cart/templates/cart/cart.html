@@ -27,6 +27,16 @@
                             <div class="col align-self-center text-right text-muted">{{ product_count }} items</div>
                         </div>
                     </div>
+                    <div class="row row-cart border-bottom">
+                        <div class="row main align-items-center">
+                            <div class="col-2"> </div>
+                            <div class="col">
+                                <div class="row text-muted">Product</div>
+                            </div>
+                            <div class="col"> Quantity </div>
+                            <div class="col"> Unit Price </div>
+                        </div>
+                    </div>
                     {% for item in cart_items %}
                     {% with product=item.product %}
                     <div class="row row-cart border-bottom">
@@ -39,7 +49,7 @@
                             <div class="col">
                                 <div class="row text-muted">{{ product.friendly_name }}</div>
                             </div>
-                            <div class="col"> <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a> </div>
+                            <div class="col"> {{ item.quantity }} </div>
                             <div class="col">€{{ product.price }} <span class="close">&#10005;</span></div>
                         </div>
                     </div>
@@ -86,4 +96,10 @@
     </div>
 </div>
 
+{% endblock %}
+
+{% block postloadjs %} 
+{{ block.super }} 
+{% include 'products/includes/quantity_button.html' %} 
+{% include 'includes/main_js.html' %} 
 {% endblock %}
