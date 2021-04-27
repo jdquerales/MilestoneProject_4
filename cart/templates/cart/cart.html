@@ -29,7 +29,7 @@
                     </div>
                     {% for item in cart_items %}
                     {% with product=item.product %}
-                    <div class="row border-top border-bottom">
+                    <div class="row row-cart border-bottom">
                         <div class="row main align-items-center">
                             <div class="col-2"> <img
                                 src="{{ MEDIA_URL }}{{product.image.url}}"
