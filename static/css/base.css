@@ -120,7 +120,7 @@ a:hover {
 
 
 footer {
-  background-color: #11426e;
+  background-color: rgba(17, 66, 110, 0.9);
   max-height: auto;
   min-height: 15vh;
   overflow: hidden;
