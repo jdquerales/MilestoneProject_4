@@ -22,7 +22,7 @@
                     <div class="title">
                         <div class="row">
                             <div class="col">
-                                <h4><b> {{ product_count }} items </b></h4>
+                                <h4><b> {{ product_count }} item{{ product_count|pluralize }} </b></h4>
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,8 @@
                             </div>
                             <div class="col cart-items"> {{ item.quantity }} </div>
                             <div class="col cart-items">€{{ product.price }} </div>
-                                <div class="col cart-items"> <a href=""><span class="badge rounded-pill bg-danger"><i class="fas fa-trash"></i>
+                                <div class="col cart-items"> 
+                                    <a class="remove-item" href=""><span class="badge rounded-pill bg-danger" id="remove_{{ item.item_id }}"><i class="fas fa-trash"></i>
                             </span></a></div>
                         </div>
                     </div>
@@ -77,7 +78,7 @@
                     </form>
                     <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
                         <div class="col">TOTAL PRICE</div>
-                        <div class="col text-right">&euro; 137.00</div>
+                        <div class="col text-right">€{{ grand_total|floatformat:2 }}</div>
                     </div> <button class="btn">CHECKOUT</button>
                 </div>
             </div>
@@ -104,4 +105,20 @@
 {{ block.super }} 
 {% include 'products/includes/quantity_button.html' %} 
 {% include 'includes/main_js.html' %} 
+
+<script type="text/javascript">
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
+
 {% endblock %}

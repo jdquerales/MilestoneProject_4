@@ -1,4 +1,8 @@
 from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404
+from django.conf import settings
+from django.views.decorators.http import require_http_methods
+from django.http import HttpResponse
 
 # Create your views here.
 
