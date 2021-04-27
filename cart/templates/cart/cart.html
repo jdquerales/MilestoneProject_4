@@ -22,9 +22,8 @@
                     <div class="title">
                         <div class="row">
                             <div class="col">
-                                <h4><b> Your shopping cart</b></h4>
+                                <h4><b> {{ product_count }} items </b></h4>
                             </div>
-                            <div class="col align-self-center text-right text-muted">{{ product_count }} items</div>
                         </div>
                     </div>
                     <div class="row row-cart border-bottom">
@@ -33,8 +32,9 @@
                             <div class="col">
                                 <div class="row text-muted cart-items">Product</div>
                             </div>
-                            <div class="col cart-items"> Qty </div>
-                            <div class="col cart-items"> Unit Price </div>
+                            <div class="col cart-items">Qty</div>
+                            <div class="col cart-items">Unit Price</div>
+                            <div class="col cart-items">Remove</div>
                         </div>
                     </div>
                     {% for item in cart_items %}
@@ -50,7 +50,9 @@
                                 <div class="row text-muted cart-items">{{ product.friendly_name }}</div>
                             </div>
                             <div class="col cart-items"> {{ item.quantity }} </div>
-                            <div class="col cart-items">€{{ product.price }} <span class="close">&#10005;</span></div>
+                            <div class="col cart-items">€{{ product.price }} </div>
+                                <div class="col cart-items"> <a href=""><span class="badge rounded-pill bg-danger"><i class="fas fa-trash"></i>
+                            </span></a></div>
                         </div>
                     </div>
                     {% endwith %}
