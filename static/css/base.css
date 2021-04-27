@@ -674,7 +674,7 @@ button:focus {
 }
 
 #shopping-cart {
-  width: 80%;
+  width: 90%;
 }
 
 .navegation-arrows {
@@ -755,4 +755,9 @@ button:focus {
   padding: 4vh 5vh;
   border-bottom-left-radius: 1rem;
   border-top-left-radius: 1rem
+}
+
+.cart-items {
+    display: flex;
+    justify-content: center;
 }

@@ -31,10 +31,10 @@
                         <div class="row main align-items-center">
                             <div class="col-2"> </div>
                             <div class="col">
-                                <div class="row text-muted">Product</div>
+                                <div class="row text-muted cart-items">Product</div>
                             </div>
-                            <div class="col"> Quantity </div>
-                            <div class="col"> Unit Price </div>
+                            <div class="col cart-items"> Qty </div>
+                            <div class="col cart-items"> Unit Price </div>
                         </div>
                     </div>
                     {% for item in cart_items %}
@@ -47,10 +47,10 @@
                                 alt="{{ product.friendly_name }}"
                               /></div>
                             <div class="col">
-                                <div class="row text-muted">{{ product.friendly_name }}</div>
+                                <div class="row text-muted cart-items">{{ product.friendly_name }}</div>
                             </div>
-                            <div class="col"> {{ item.quantity }} </div>
-                            <div class="col">€{{ product.price }} <span class="close">&#10005;</span></div>
+                            <div class="col cart-items"> {{ item.quantity }} </div>
+                            <div class="col cart-items">€{{ product.price }} <span class="close">&#10005;</span></div>
                         </div>
                     </div>
                     {% endwith %}
