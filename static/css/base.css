@@ -9,7 +9,7 @@ body {
   font-size: 16px;
   background: url("/media/home.jpeg") no-repeat center center fixed;
   background-size: cover;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 300;
 }
 
@@ -107,17 +107,16 @@ a:hover {
   font-size: 1.2rem;
 }
 
-.sorting-row{
+.sorting-row {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.sorting-column{
+.sorting-column {
   margin-top: 10px;
   margin-bottom: 10px;
   background: #f4f4f4;
 }
-
 
 footer {
   background-color: rgba(17, 66, 110, 0.9);
@@ -257,7 +256,7 @@ footer {
 }
 
 .row {
-  margin: 0px 0px 0px 0px;
+  margin: 10px 0px 10px 0px;
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
   padding: 0px 0px 0px 0px;
@@ -429,7 +428,7 @@ button:focus {
 }
 
 .bg-shopping-cart {
-  background-color: #FECC67;
+  background-color: #fecc67;
   color: #11426e;
 }
 
@@ -652,7 +651,6 @@ button:focus {
   margin: 2px 2px 2px 2px;
 }
 
-
 .btt-button {
   height: 42px;
   width: 42px;
@@ -671,11 +669,11 @@ button:focus {
   border: 1px solid black !important;
 }
 
-#shopping-cart{
+#shopping-cart {
   width: 80%;
 }
 
-.navegation-arrows{
+.navegation-arrows {
   font-size: 40px;
   color: #11426e;
 }
@@ -695,7 +693,7 @@ button:focus {
   margin-top: 15px;
 }
 
-#wrapper-disabled{
+#wrapper-disabled {
   position: relative;
 }
 
@@ -703,12 +701,54 @@ button:focus {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: .1;
+  opacity: 0.1;
   height: 20px;
   width: 70px;
-}​
-
-#search-button {
+}
+​ #search-button {
   display: none;
 }
 
+
+/* Shopping cart */
+
+.summary {
+  background-color: #ddd;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 4vh;
+  color: rgb(65, 65, 65)
+}
+
+@media(max-width:767px) {
+  .summary {
+      border-top-right-radius: unset;
+      border-bottom-left-radius: 1rem
+  }
+}
+
+.summary .col-2 {
+  padding: 0
+}
+
+.summary .col-10 {
+  padding: 0
+}
+
+.card-cart {
+  margin: auto;
+  max-width: 950px;
+  width: 90%;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 1rem;
+  border: transparent;
+  display: block;
+  padding: 0px 0px 0px 0px;
+}
+
+.cart {
+  background-color: #fff;
+  padding: 4vh 5vh;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem
+}
