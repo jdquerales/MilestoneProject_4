@@ -59,7 +59,14 @@
                     {% endwith %}
                     {% endfor %}
 
-                    <div class="back-to-shop"><a href="#">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
+                    <div class="back-to-shop"><a class="links" href="{% url 'products' %}">
+                        <span>
+                            <i class="fas fa-arrow-circle-left navegation-arrows"></i>
+                        </span>
+                        <span class="text-uppercase-blue">
+                            Go back to store
+                        </span>
+                    </a></div>
                 </div>
                 <div class="col-md-4 summary">
                     <div>
@@ -72,7 +79,7 @@
                     </div>
                     <form>
                         <p>SHIPPING</p> <select>
-                            <option class="text-muted">Standard-Delivery- &euro;5.00</option>
+                            <option class="text-muted">Standard-Delivery- {{ standard_delivery_percentage }}% </option>
                         </select>
                         <p>GIVE CODE</p> <input id="code" placeholder="Enter your code">
                     </form>

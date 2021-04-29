@@ -6,9 +6,11 @@ from django.http import HttpResponse
 
 # Create your views here.
 
+
 def view_cart(request):
     """ A view to render cart.html template for the shopping cart page """
     return render(request, 'cart/cart.html')
+
 
 def add_to_cart(request, item_id):
     """ Add the quantity of selected product to the shopping cart """
@@ -24,6 +26,7 @@ def add_to_cart(request, item_id):
 
     request.session['cart'] = cart
     return redirect(redirect_url)
+
 
 def remove_from_cart(request, item_id):
     """Remove item from shopping cart"""
