@@ -2,6 +2,7 @@ from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
+from coupons.models import Coupon
 
 def cart_contents(request):
 
@@ -9,6 +10,19 @@ def cart_contents(request):
     total = 0
     product_count = 0
     cart = request.session.get('cart', {})
+    coupon_id = request.session.get('coupon_id')
+
+    discount = 0
+
+    if coupon_id:
+        try:
+            return Coupon.objects.get(id=self.coupon_id)
+        except Coupon.DoesNotExist:
+            pass
+        return None
+
+        if coupon:
+            discount = (coupon.discount / Decimal(100))*total_price
 
     for item_id, quantity in cart.items():
         product = get_object_or_404(Product, pk=item_id)
@@ -18,6 +32,7 @@ def cart_contents(request):
             'item_id': item_id,
             'quantity': quantity,
             'product': product,
+            'coupon_id': coupon_id
         })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
@@ -29,6 +44,8 @@ def cart_contents(request):
 
     grand_total = delivery + total
 
+    total_price_after_discount = delivery + total - discount
+
     context = {
         'cart_items': cart_items,
         'total': total,
@@ -37,7 +54,9 @@ def cart_contents(request):
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'standard_delivery_percentage': settings.STANDARD_DELIVERY_PERCENTAGE,
-        'grand_total': grand_total
+        'grand_total': grand_total,
+        'total_price_after_discount': total_price_after_discount,
+        'discount' : discount
     }
 
     return context

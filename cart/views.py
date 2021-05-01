@@ -5,13 +5,15 @@ from django.views.decorators.http import require_http_methods
 from django.http import HttpResponse
 from django.contrib import messages
 from products.models import Product
+from coupons.forms import CouponApplyForm
 
 # Create your views here.
 
 
 def view_cart(request):
     """ A view to render cart.html template for the shopping cart page """
-    return render(request, 'cart/cart.html')
+    coupon_apply_form = CouponApplyForm()
+    return render(request, 'cart/cart.html', {'coupon_apply_form': coupon_apply_form})
 
 
 def add_to_cart(request, item_id):

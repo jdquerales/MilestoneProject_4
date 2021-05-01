@@ -1,4 +1,8 @@
 from django import forms
+from .models import Coupon
 
-class CouponApplyForm(form.Form):
-    code = forms.CharField()
+
+class CouponApplyForm(forms.ModelForm):
+    class Meta:
+        model = Coupon
+        fields = ['code']

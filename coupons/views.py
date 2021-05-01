@@ -16,6 +16,8 @@ def coupon_apply(request):
                                         valid_to__gte=now,
                                         active=True)
             request.session['coupon_id'] = coupon.id
+            print('found')
         except Coupon.DoesNotExist:
-        request.session['coupon_id'] = None
-    return redirect('cart:cart_detail')
+            request.session['coupon_id'] = None
+            print('not found')
+    return redirect('view_cart')

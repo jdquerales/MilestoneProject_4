@@ -81,10 +81,27 @@
                         <div class="col" style="padding-left:0;">Delivery Fee</div>
                         <div class="col text-right"> € {{ delivery|floatformat:2 }}</div>
                     </div>
+                    <div class="row">
+                        <div class="col" style="padding-left:0;">Discount</div>
+                        <div class="col text-right"> € {{ discount|floatformat:2 }}</div>
+                    </div>
+
+                    <p>Apply a coupon:</p>
+                    <form action="{% url 'coupons:apply' %}" method="post">
+                    {{ coupon_apply_form }}
+                    <input type="submit" value="Apply">
+                    {% csrf_token %}
+                    </form>
+
                     <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
                         <div class="col">GRAND TOTAL</div>
                         <div class="col text-right">€ {{ grand_total|floatformat:2 }}</div>
+
+                        <div class="col">GRAND TOTAL AFTER DISCOUNT</div>
+                        <div class="col text-right">€ {{ total_price_after_discount|floatformat:2 }}</div>
                     </div> <button class="btn">CHECKOUT</button>
+
+                    
                 </div>
             </div>
         </div>
