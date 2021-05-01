@@ -3,6 +3,8 @@ from django.shortcuts import get_object_or_404
 from django.conf import settings
 from django.views.decorators.http import require_http_methods
 from django.http import HttpResponse
+from django.contrib import messages
+from products.models import Product
 
 # Create your views here.
 
@@ -15,6 +17,7 @@ def view_cart(request):
 def add_to_cart(request, item_id):
     """ Add the quantity of selected product to the shopping cart """
 
+    product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
@@ -23,6 +26,7 @@ def add_to_cart(request, item_id):
         cart[item_id] += quantity
     else:
         cart[item_id] = quantity
+        messages.success(request, f'You have added {product.name} to your cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
