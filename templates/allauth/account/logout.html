@@ -20,9 +20,23 @@
               />
               {% endif %}
               <button type="submit" class="btn btn-red text-center">
-                {% trans 'Sign Out' %}
+                {% trans 'Yes, Sign Out' %}
               </button>
             </form>
+
+            <form method="post" action="{% url 'home' %}">
+              {% csrf_token %} {% if redirect_field_value %}
+              <input
+                type="hidden"
+                name="{{ redirect_field_name }}"
+                value="{{ redirect_field_value }}"
+              />
+              {% endif %}
+              <button type="submit" class="btn-stay btn-success text-center">
+                {% trans 'No, Stay Logged In!' %}
+              </button>
+            </form>
+
           </div>
         </div>
       </div>
