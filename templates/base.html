@@ -188,15 +188,17 @@
   {% if messages %}
   <div class="message-container">
       {% for message in messages %}
-        {% include 'includes/toasts/toast_success/html' %}
+        {% include 'includes/toasts/toast_success.html' %}
+      {% endfor %}
   </div>
   {% endif %}
 
 
-
   {% block postloadjs %} 
     <script type="text/javascript">
-      $('.toast').toast('show');
+    $(document).ready(function() {
+        $(".toast").toast('show');
+    });
     </script>
   {% endblock %}
 
@@ -214,20 +216,15 @@
       <div class="col-lg-4 col-md-4 text-center">
         <p class="text-white-uppercase lead">FREE RETURNS</p>
       </div>
-
     </div>
 
     <div class="row social-links">
       <div class="col  text-center social-links">
         <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i>
-
         </a>
         <a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest"></i>
-
-        </a>
-
+       </a>
         <span class="copyright"> © 2021 Copyright <strong> José Querales</strong> . All rights reserved. </span>
-
       </div>
     </div>
 
