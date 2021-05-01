@@ -95,6 +95,14 @@ a:hover {
   font-size: 1.2rem;
 }
 
+.btn-apply {
+  background-color: #5075af;
+  color: white;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+}
+
 .btn-stay {
   background-color: green;
   color: white;
@@ -788,4 +796,17 @@ button:focus {
 
 .toast-capper {
   height: 2px;
+}
+
+/*********************************************
+				Coupons
+*********************************************/
+
+.apply {
+  background-color: #365b96;
+  color: red;
+}
+
+#coupon {
+  margin-top: 20px;
 }

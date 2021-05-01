@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .models import Coupon
 import datetime
+from django.core.exceptions import ValidationError
 
 
 class TestCouponModel(TestCase):
@@ -14,6 +15,11 @@ class TestCouponModel(TestCase):
                               valid_from = test_valid_from, 
                               valid_to = test_valid_to, 
                               discount = 10,
+                              active = True)
+        Coupon.objects.create(code='TestWrongCoupon',
+                              valid_from = test_valid_from, 
+                              valid_to = test_valid_to, 
+                              discount = 7000,
                               active = True)
 
     def test_code_field(self):

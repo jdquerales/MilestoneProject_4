@@ -86,11 +86,11 @@
                         <div class="col text-right"> € {{ discount|floatformat:2 }}</div>
                     </div>
 
-                    <p>Apply a coupon:</p>
+                    <p id="coupon">Apply a coupon:</p>
                     <form action="{% url 'coupon_apply' %}" method="post">
                     {% csrf_token %}
                     {{ coupon_apply_form }}
-                    <input type="submit" value="Apply">
+                    <input class="btn-apply" type="submit" value="APPLY COUPON">
                     </form>
 
                     <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
