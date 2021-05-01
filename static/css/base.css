@@ -810,3 +810,12 @@ button:focus {
 #coupon {
   margin-top: 20px;
 }
+
+/*********************************************
+				CheckOut
+*********************************************/
+
+.text-bold-red{
+  color: red;
+  font-weight: bold;
+}

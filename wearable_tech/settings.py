@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'checkout',
 
     # Other 
-    'crispy_forms',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -69,7 +69,7 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 ROOT_URLCONF = 'wearable_tech.urls'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 TEMPLATES = [
     {
