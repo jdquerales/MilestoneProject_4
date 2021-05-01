@@ -38,3 +38,7 @@ class TestCouponModel(TestCase):
         coupon = Coupon.objects.get(pk=1)
         expected_object_name = f'{coupon.code}'
         self.assertEqual(expected_object_name, str(coupon))
+
+    def test_coupon_discount_is_integer(self):
+        coupon = Coupon.objects.get(pk=1)
+        self.assertIsInstance(coupon.discount, int)
