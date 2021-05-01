@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'products',
     'cart',
     'coupons.apps.CouponsConfig',
+    'wishlist'
 ]
 
 MIDDLEWARE = [
