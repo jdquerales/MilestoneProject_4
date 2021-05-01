@@ -49,7 +49,10 @@ INSTALLED_APPS = [
     'cart',
     'coupons.apps.CouponsConfig',
     'wishlist',
-    'checkout'
+    'checkout',
+
+    # Other 
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -65,6 +68,8 @@ MIDDLEWARE = [
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 ROOT_URLCONF = 'wearable_tech.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 TEMPLATES = [
     {
@@ -82,6 +87,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'cart.contexts.cart_contents',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
