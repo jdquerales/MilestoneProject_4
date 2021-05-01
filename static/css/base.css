@@ -721,7 +721,8 @@ button:focus {
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   padding: 4vh;
-  color: rgb(65, 65, 65)
+  color: rgb(65, 65, 65);
+  min-height: 25rem;
 }
 
 @media(max-width:767px) {
