@@ -43,7 +43,7 @@ def all_products(request):
             if not query:
                 messages.error(
                     request, "You didn't enter any search criteria!")
-                return redirect(reverse('products'))
+                return redirect(reverse('home'))
             queries = Q(friendly_name__icontains=query) | Q(
                 description__icontains=query)
             products = products.filter(queries)
