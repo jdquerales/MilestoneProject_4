@@ -86,7 +86,7 @@
                         <div class="col text-right"> € {{ discount|floatformat:2 }}</div>
                     </div>
 
-                    <p id="coupon">Apply a coupon:</p>
+                    <h5 id="coupon"><b>Discount codes:</b></h5>
                     <form action="{% url 'coupon_apply' %}" method="post">
                     {% csrf_token %}
                     {{ coupon_apply_form }}
