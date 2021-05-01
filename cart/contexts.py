@@ -6,23 +6,19 @@ from coupons.models import Coupon
 
 def cart_contents(request):
 
+    discount = 0
+
     cart_items = []
     total = 0
     product_count = 0
     cart = request.session.get('cart', {})
-    coupon_id = request.session.get('coupon_id')
-
-    discount = 0
+    coupon_id = request.session.get('coupon_id', {})
 
     if coupon_id:
         try:
-            return Coupon.objects.get(id=self.coupon_id)
+            coupon = Coupon.objects.get(pk=coupon_id)
         except Coupon.DoesNotExist:
             pass
-        return None
-
-        if coupon:
-            discount = (coupon.discount / Decimal(100))*total_price
 
     for item_id, quantity in cart.items():
         product = get_object_or_404(Product, pk=item_id)
@@ -43,6 +39,9 @@ def cart_contents(request):
         free_delivery_delta = 0
 
     grand_total = delivery + total
+
+    if coupon_id:
+        discount = (coupon.discount / Decimal(100))*total
 
     total_price_after_discount = delivery + total - discount
 
