@@ -99,7 +99,7 @@
 
                         <div class="col">GRAND TOTAL AFTER DISCOUNT</div>
                         <div class="col text-right">€ {{ total_price_after_discount|floatformat:2 }}</div>
-                    </div> <button class="btn">CHECKOUT</button>
+                    </div> <button class="btn"><a href="{% url 'checkout' %}" class="nav-link">CHECKOUT</a></button>
 
                     
                 </div>

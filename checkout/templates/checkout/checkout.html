@@ -17,7 +17,9 @@
     <div class="row">
         <p>Please fill out the form</p>
         <div class="card card-cart">
-            
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form"></form>
+            {% csrf_token %}
+            {{ order_form }}
         </div>
 
     </div>
