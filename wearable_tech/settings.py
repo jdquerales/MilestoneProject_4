@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.facebook',
     'home',
     'products',
     'cart',
@@ -106,16 +105,6 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
-
-# Provider specific settings
-SOCIALACCOUNT_PROVIDERS =  { 'facebook':
-                               {'METHOD': 'oauth2',
-                                'SCOPE': ['email'],
-                                'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
-                                'LOCALE_FUNC': lambda request: 'en_US',
-                                'VERSION': 'v2.4'
-                               }
-                           }
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

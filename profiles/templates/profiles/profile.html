@@ -12,6 +12,37 @@
             <h2 mb-4> My Profile </h2>
             <hr>
         </div>
+        
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <h2 mb-4> Your wishlit list </h2>
+        {% for product in products %}
+
+        <div class="row">
+            <div class="col-2 mb-1">
+                <a href="">
+                    {% if product.image %}
+                        <img class="w-100" src="{{ product.image.url }}" alt="{{ product.friendly_name }}">
+                    {% else %}
+                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.friendly_name }}">
+                    {% endif %}
+                </a>
+            </div>
+            <div class="col-7">
+                <p class="my-0"><strong>{{ product.friendly_name }}</strong></p>
+            </div>
+            <div class="col-3 text-right">
+                <p class="my-0 small text-muted">€ {{ product.price }}</p>
+            </div>
+        </div>
+
+            
+        {% endfor %}
+
+        </div>
+        
     </div>
 </div>
 
