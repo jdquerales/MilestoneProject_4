@@ -42,3 +42,8 @@ class TestViews(TestCase):
         user = User.objects.get(pk=1)
         expected_object_name = f'{user.username}'
         self.assertEqual(expected_object_name, str(user))
+
+    def test_product_phone_number_max_length(self):
+        profile = UserProfile.objects.get(pk=1)
+        max_length = profile._meta.get_field('default_phone_number').max_length
+        self.assertEqual(max_length, 20)
