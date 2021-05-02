@@ -1,0 +1,27 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block content %}
+
+<div class="overlay"></div>
+
+<div class="container mb-2" id="shopping-cart">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 mb-4> Thank you! / Muchas Gracias! </h2>
+            <hr>
+            <p>A summary of your order is below. You will receive a confirmation in your email account:  <strong> {{ order.email }} </strong> shortly!</p>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-12 colg-lg-7">
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
