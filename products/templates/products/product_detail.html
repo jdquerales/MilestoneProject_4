@@ -124,7 +124,7 @@
         </div>
         {% endif %}
         <div class="btn-group wishlist">
-          <button type="button" class="btn-danger">Add to wishlist</button>
+          <button type="button" class="btn-danger"><a href="{% url 'add_to_wishlist' product.id %}">Add to whislist </a></button>
         </div>
       </form>
       </div>
