@@ -91,6 +91,10 @@ def checkout_success(request, order_number):
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
+    
+    current_cart = cart_contents(request)
+    total = current_cart['total_price_after_discount']
+    discount = current_cart['discount']
 
     if 'cart' in request.session:
         del request.session['cart']
@@ -98,6 +102,8 @@ def checkout_success(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
+        'total': total, 
+        'discount': discount,
     }
 
     return render(request, template, context)
