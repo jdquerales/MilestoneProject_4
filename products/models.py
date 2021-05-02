@@ -1,4 +1,5 @@
 from django.db import models
+from profiles.models import UserProfile
 
 
 class Category(models.Model):
@@ -56,6 +57,7 @@ class Product(models.Model):
     origin = models.ForeignKey('Origin', null=True, blank=True, on_delete=models.SET_NULL)
     image = models.ImageField(null=True, blank=True)
     stock = models.BooleanField(null=False, blank=True, default=True)
+    users_wishlist = models.ManyToManyField(UserProfile, related_name="user_wishlist", blank=True)
 
     def __str__(self):
         return self.friendly_name
