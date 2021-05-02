@@ -95,6 +95,7 @@ a:hover {
   font-size: 1.2rem;
 }
 
+
 .btn-apply {
   background-color: #5075af;
   color: white;
@@ -439,7 +440,7 @@ button:focus {
   background-color: #1a237e;
   width: 150px;
   color: #fff;
-  border-radius: 2px;
+  border-radius: 15px;
 }
 
 .btn-blue:hover {
