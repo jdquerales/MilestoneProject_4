@@ -40,6 +40,8 @@
     src="https://code.jquery.com/jquery-3.6.0.js"
     integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
+       <!-- Stripe -->
+  <script src="https://js.stripe.com/v3/"></script>
   {% endblock %}
 
   {% block extra_js %}
@@ -102,7 +104,7 @@
                 </li>
 
                 <li class="nav-item">
-                  <a href="" class="nav-link"> Reviews </a>
+                  <a href="{% url 'account_login' %}" class="nav-link"> Wishlist </a>
                 </li>
 
                 <li class="list-inline-item">
