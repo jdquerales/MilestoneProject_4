@@ -111,6 +111,8 @@ SOCIAL_AUTH_FACEBOOK_SECRET = os.getenv('FACEBOOK_SECRET', '')
 
 SITE_ID = 1
 
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'https'
+
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
