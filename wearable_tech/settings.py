@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
-    'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount',
     'home',
     'products',
@@ -106,14 +105,8 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-SOCIAL_AUTH_FACEBOOK_KEY = os.getenv('FACEBOOK_KEY', '')
-SOCIAL_AUTH_FACEBOOK_SECRET = os.getenv('FACEBOOK_SECRET', '')
 
 SITE_ID = 1
-
-ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'https'
-
-
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
