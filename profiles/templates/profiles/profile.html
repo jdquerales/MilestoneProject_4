@@ -18,29 +18,34 @@
     <div class="row">
         <div class="col">
             <h2 mb-4> Your wishlit list </h2>
-        {% for product in products %}
+        {% if wishlist %}
+        {% for product in wishlist %}
+        <div class="card mb-3 rounded-0">
+            <div class="row g-0">
+              <div class="col-md-2 lg-4">
+                {% if product.image %}
+                  <img class="img-fluid d-block p-2" width="135px" src="{{ product.image.url }}"
+                    alt="{{ product.friendly_name }}" />
+                {% else %}
+                <img class="img-fluid d-block p-2" width="135px" src="{{ MEDIA_URL }}noimage.png"
+                    alt="{{ product.friendly_name }}" />
+                {% endif %}
+              </div>
+              <div class="col-md-10">
+                <div class="card-body">
+                  <h5 class="card-title">{{product.friendly_name}}</h5>
+                  <p class="card-text">{{product.description}}</p>
+                  <p class="card-text"><small class="text-muted">€ {{product.price}}</small></p>
+                  <a type="button" class="btn btn-primary fw500 btn-sm" href="{% url 'add_to_wishlist' product.id %}">Remove from Wishlist</a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <div class="row">
-            <div class="col-2 mb-1">
-                <a href="">
-                    {% if product.image %}
-                        <img class="w-100" src="{{ product.image.url }}" alt="{{ product.friendly_name }}">
-                    {% else %}
-                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.friendly_name }}">
-                    {% endif %}
-                </a>
-            </div>
-            <div class="col-7">
-                <p class="my-0"><strong>{{ product.friendly_name }}</strong></p>
-            </div>
-            <div class="col-3 text-right">
-                <p class="my-0 small text-muted">€ {{ product.price }}</p>
-            </div>
-        </div>
-
-            
         {% endfor %}
-
+        {% else %}
+           <p class="card-text">No products have been added to your wishlist yet</p>
+        {% endif %}
         </div>
         
     </div>

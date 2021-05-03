@@ -6,11 +6,11 @@ def profile(request):
     template = 'profiles/profile.html'
     
 
-    products = Product.objects.filter(user_wishlist=request.user)
+    wishlist = Product.objects.filter(user_wishlist=request.user)
     # Here I retrieve all products from user wishlist
-    print(products)
+    print(wishlist)
 
-    context = {'products': products,}
+    context = {'wishlist': wishlist,}
     
     return render(request, template, context)
     
