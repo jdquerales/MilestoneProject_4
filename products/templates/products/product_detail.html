@@ -106,29 +106,20 @@
           </div>
           <input type="hidden" name="redirect_url" value="{{ request.path }}">
         </div>
-        {% if product.stock %}
-        <div class="btn-group">
-          <button type="submit" class="btn-success">Add to cart</button>
-        </div>
-        {% else %}
-        <div class="btn-group" id="wrapper-disabled">
-          <div id="overlay-disabled"></div>
-          <button
-            type="button"
-            class="btn-disabled"
-            id="disabled-button"
-            disabled
-          >
-            Add to cart
+        <div class="form-group user-form">
+          {% if product.stock %}
+          <button class="btn btn-blue text-center" type="submit">
+            Add to Cart
           </button>
-        </div>
-        {% endif %}
-        <div class="btn-group wishlist">
-          <button type="button" class="btn-danger"><a href="{% url 'add_to_wishlist' product.id %}">Add to whislist </a></button>
+          {% else %}
+          <button class="btn btn-blue text-center btn-disabled" type="submit" disabled>
+            Add to Cart
+          </button>
+          {% endif %}
+          <a class="btn btn-yellow text-center" href="{% url 'add_to_wishlist' product.id %}" role="button">Add to whislist</a>
         </div>
       </form>
       </div>
-
 
     </div>
   </div>
