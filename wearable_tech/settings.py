@@ -27,7 +27,7 @@ SECRET_KEY = 'k$qm1you2to&6+=)e$mp-px&^$h4pm6+@sh=&_t-&ynf^cz_1='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['ms4-smart-tech.herokuapp.com', 'localhost']
 
 
 
@@ -125,25 +125,17 @@ WSGI_APPLICATION = 'wearable_tech.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, "db.sqlite3"),
+if os.environ.get("DATABASE_URL"):
+    DATABASES = {
+        "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
     }
-}
-
-#if os.environ.get("DATABASE_URL"):
-#    DATABASES = {
-#        "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
-#    }
-#else:
-#    DATABASES = {
-#        "default": {
-#            "ENGINE": "django.db.backends.sqlite3",
-#            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-#        }
-#    }
-
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        }
+    }
 
 
 # Password validation

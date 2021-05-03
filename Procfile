@@ -1,0 +1,1 @@
+web: gunicorn wearable_tech.wsgi:application
