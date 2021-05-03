@@ -116,9 +116,14 @@
             Add to Cart
           </button>
           {% endif %}
+          {% if request.user.is_authenticated %}
           <a class="btn btn-yellow text-center" href="{% url 'add_to_wishlist' product.id %}" role="button">Add to whislist</a>
+          {% else %}
+          <a class="btn btn-yellow text-center btn-disabled" disabled id="wishlistbtn">Add to whislist</a>
+          {% endif %}
         </div>
       </form>
+      <p id="error-wishlist">Please login in order to be able to add items to wishlist!</p>
       </div>
 
     </div>
@@ -130,5 +135,13 @@
 {{ block.super }} 
 {% include 'products/includes/quantity_button.html' %} 
 {% include 'includes/main_js.html' %} 
+
+<script type="text/javascript">
+    $("#error-wishlist").hide();
+    $("#wishlistbtn").click(function(){
+    $("#error-wishlist").toggle();
+      });
+</script>
+
 {% endblock %}
 
