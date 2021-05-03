@@ -1,5 +1,10 @@
-{% extends "account/base.html" %} {% load i18n %} {% block head_title %}{% trans
-"Sign Out" %}{% endblock %} {% block content %}
+{% extends "account/base.html" %}
+{% load i18n %}
+{% block head_title %}
+{% trans "Sign Out" %}
+{% endblock %} 
+
+{% block content %}
 
 <div
   class="container-fluid header-background px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto"
@@ -26,7 +31,7 @@
                   {% trans "Sign Out" %}
                 </button>
                 <a class="btn btn-yellow text-center" href="{% url 'home' %}" role="button">{% trans "HOME" %}</a>
-                
+
               </div>
 
 
