@@ -3,7 +3,11 @@
 {% load i18n %} 
 {% load account socialaccount%} 
 
-{% block head_title %}{% trans "Sign In" %}{% endblock %} 
+{% block head_title %}
+
+<h1> {% trans "Sign In" %} </h1>
+
+{% endblock %} 
 
 {% block content %}
 <div
@@ -14,7 +18,7 @@
       <div class="col-lg-12">
         <div class="card2 card-login border-0 px-4 py-5">
           <div class="row mb-4 px-3">
-            <h6 class="mb-0 mr-4 mt-2">Sign in with</h6>
+            <h2 class="mb-0 mr-4 mt-2">Sign In</h2>
             {% get_providers as socialaccount_providers %} 
             {% if socialaccount_providers %}
             <div class="socialaccount_ballot">
@@ -31,9 +35,9 @@
             {% include "socialaccount/snippets/login_extra.html" %} 
             {% else %}
             <p>
-              {% blocktrans %}If you have not created an account yet, then
-              please <a href="{{ signup_url }}">sign up</a> first.
-              {% endblocktrans %}
+          <!--  {% blocktrans %}If you have not created an account yet, then
+          #    please <a href="{{ signup_url }}">sign up</a> first.
+          #    {% endblocktrans %}--> 
             </p>
             {% endif %}
             <form
@@ -41,17 +45,20 @@
               method="POST"
               action="{% url 'account_login' %}"
             >
-              {% csrf_token %} {{ form.as_p }} {% if redirect_field_value %}
+              {% csrf_token %} {{ form|crispy }} {% if redirect_field_value %}
               <input
                 type="hidden"
                 name="{{ redirect_field_name }}"
                 value="{{ redirect_field_value }}"
               />
               {% endif %}
-
+            <div class="form-group user-form">
               <button class="btn btn-blue text-center" type="submit">
                 {% trans "Sign In" %}
               </button>
+              <a class="btn btn-yellow text-center" href="{% url 'home' %}" role="button">{% trans "HOME" %}</a>
+            </div>
+
             </form>
 
             <div class="row mb-4 px-3">

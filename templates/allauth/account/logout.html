@@ -19,9 +19,17 @@
                 value="{{ redirect_field_value }}"
               />
               {% endif %}
-              <button type="submit" class="btn btn-red text-center">
-                {% trans 'Yes, Sign Out' %}
-              </button>
+
+              <div class="form-group user-form">
+
+                <button class="btn btn-blue text-center" type="submit">
+                  {% trans "Sign Out" %}
+                </button>
+                <a class="btn btn-yellow text-center" href="{% url 'home' %}" role="button">{% trans "HOME" %}</a>
+                
+              </div>
+
+
             </form>
 
             <form method="post" action="{% url 'home' %}">
@@ -32,9 +40,9 @@
                 value="{{ redirect_field_value }}"
               />
               {% endif %}
-              <button type="submit" class="btn-stay btn-success text-center">
-                {% trans 'No, Stay Logged In!' %}
-              </button>
+
+
+
             </form>
 
           </div>

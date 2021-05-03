@@ -108,9 +108,6 @@ a:hover {
 .btn-stay {
   background-color: green;
   color: white;
-  border-radius: 10px;
-  padding: 1rem 1.5rem;
-  font-size: 1.2rem;
 }
 
 .btn:hover {
@@ -442,10 +439,24 @@ button:focus {
   width: 150px;
   color: #fff;
   border-radius: 15px;
+  margin: 5px 5px 5px 5px
 }
 
 .btn-blue:hover {
   background-color: rgb(74, 127, 196);
+  cursor: pointer;
+}
+
+.btn-yellow {
+  background-color: #FECC67;
+  width: 150px;
+  color: #11426e;
+  border-radius: 15px;
+  margin: 5px 5px 5px 5px
+}
+
+.btn-yellow:hover {
+  background-color: rgb(139, 196, 74);
   cursor: pointer;
 }
 
@@ -909,3 +920,20 @@ select option[value=""] {
 /*********************************************
 				Profile app
 *********************************************/
+
+.form-check{
+  margin-top: 10px !important;
+  padding-left: 0px !important;
+}
+
+.user-form{
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+#id_remember {
+  width: 10px !important;
+  margin-left: 0px !important;
+  margin-right: 5px !important;
+}
