@@ -174,4 +174,4 @@ In order to send real emails from the application, you need to connect it to you
 ## Data Model
 
 
-![Home page validation](./media/smarttech_data_model_draft.png)
+![Home page validation](./media/smarttech_data_model.png)
