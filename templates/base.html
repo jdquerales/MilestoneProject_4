@@ -77,8 +77,9 @@
                 {% if request.user.is_authenticated %}
                 <!--  {% if request.user.is_superuser %}
                 {% endif %} -->
-                <li class="nav-item"></li>
+                <li class="nav-item">
                 <a href="{% url 'profile' %}" class="nav-link">Profile</a>
+              </li>
                 <li class="nav-item">
                   <a href="{% url 'account_logout' %}" class="nav-link"> Logout </a>
                 </li>
@@ -89,7 +90,6 @@
                 <li class="nav-item">
                   <a href="{% url 'account_signup' %}" class="nav-link"> Register </a>
                 </li>
-
                 {% endif %}
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -105,6 +105,12 @@
                     </li>
                   </ul>
                 </li>
+                {% if request.user.is_authenticated %}
+                <!--  {% if request.user.is_superuser %}
+                {% endif %} -->
+                <li class="nav-item"></li>
+                <a href="{% url 'submit_review' %}" class="nav-link">Reviews</a>
+                {% endif %}
                 <li class="list-inline-item">
                     <a href="{% url 'view_cart' %}">
                   <span class="shopping-basket-icon"> <span class="badge rounded-pill bg-shopping-cart">
