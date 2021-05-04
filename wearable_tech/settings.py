@@ -105,10 +105,7 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-if 'DEVELOPMENT' in os.environ:
-    SITE_ID = 5
-else:
-    SITE_ID = 1
+SITE_ID = 1
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
@@ -140,7 +137,7 @@ else:
     }
 
 #DATABASES = {
-#    "default": dj_database_url.parse()
+#    "default": dj_database_url.parse('')
 #}
 
 # Password validation
