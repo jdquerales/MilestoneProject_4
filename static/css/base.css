@@ -302,6 +302,11 @@ margin: 10px 0px 10px 0px;
   align-items: center;
 }
 
+.card-wishlist {
+  min-height: 0px !important;
+  width: 50%;
+}
+
 .card-login {
   min-height: 400px;
   background-color: #f0ffff;
@@ -449,7 +454,8 @@ button:focus {
   width: 150px;
   color: #fff;
   border-radius: 15px;
-  margin: 5px 5px 5px 5px
+  margin: 5px 5px 5px 5px;
+  font-size: 16px;
 }
 
 .btn-blue:hover {
@@ -462,7 +468,16 @@ button:focus {
   width: 150px;
   color: #11426e;
   border-radius: 15px;
-  margin: 5px 5px 5px 5px
+  margin: 5px 0px 5px 0px;
+  font-size: 16px
+}
+
+.btn-yellow-wishlist {
+  background-color: #FECC67;
+  color: #11426e;
+  border-radius: 15px;
+  margin: 5px 0px 5px 0px;
+  font-size: 16px
 }
 
 .btn-yellow:hover {
@@ -617,6 +632,13 @@ button:focus {
 #row-product {
   margin: 10vh 10vh 10vh 10vh;
 }
+
+@media (max-width: 620px){
+  #row-product {
+    margin: 5vh 5vh 5vh 5vh;
+  }
+}
+
 /*********************************************
 				ITEM 
 *********************************************/
@@ -1042,6 +1064,53 @@ Order history
 
 #review-form{
   width: 70%;
+}
+
+
+.btn.btn-outline-black.rounded-0,
+    .btn.btn-black.rounded-0 {
+        padding: .375rem .375rem;
+        margin: 5px 5px 5px 5px !important;
+    }
+
+
+#checkout:hover {
+      color:  black;
+}
+
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .50rem;
+    }
+
+    .rounded-0 {
+      border-radius: 10px !important;
+    }
+
+.text-muted {
+  font-size: 30px;
+}
+
+.profile-column{
+  margin: 10px 10px 10px 10px;
+}
+
+@media screen and (min-width: 991px) {
+  .profile-div{
+    width: 50%;
+  }
+}
+.wishlist-column{
+  margin: 20px 20px 20px 20px;
+}
+
+.profile{
+  margin-top: 10px;
+}
+
+.profile-div{
+  border-style: groove;
 }
 
 /*
