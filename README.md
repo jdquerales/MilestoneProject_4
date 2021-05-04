@@ -52,13 +52,13 @@ The dataset contains columns such as: body_location, name, price, categories, im
 
 For example:
 
-body_location: Head, Wrist, Neck, Hands, Chest, Arms, Torso.
-category: Entertainment, Lifestyle, Fitness, Gaming, Medical.
-company_country: China, USA, UK, Japan, Canada, etc
+- **body_location**: Head, Wrist, Neck, Hands, Chest, Arms, Torso.
+- **category**: Entertainment, Lifestyle, Fitness, Gaming, Medical.
+- **company_country**: China, USA, UK, Japan, Canada, etc
 
 
 
-The data model will contain at least 4 models: product, category, body_location, users, shopping_bag. 
+The data model will contain at least the following models: product, category, body_location, users, shopping_bag, wishlist, product_reviews. 
 
 The project will be divide into 5 main parts:
 Viewing and Navigation
@@ -260,3 +260,7 @@ I will adopt a logical-schema design approach, for example:
 
 
 ![Home page validation](./media/smarttech_revised_model.png)
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ Back To Top</a></b>
+</div>
