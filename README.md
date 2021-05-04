@@ -182,7 +182,7 @@ To deploy the project to [Heroku](https://heroku.com/) the following steps need 
 NOTE: these 1-3 steps already done in this project and included in the GitHub repository, but illistrated here as they are required for the successfull deployment to Heroku.        
 As well as that, other things that are required for the Heroku deployment and have to be installed: **gunicorn** (WSGI HTTP Server), **dj-database-url** for database connection and **Psycopg** (PostgreSQL driver for Python). All of the mentioned above are *already installed* in this project in the requirements.txt file.     
 4. On the [Heroku](https://heroku.com/) website you need to create a **new app**, assigne a name (must be unique),set a region to the closest to you(for my project I set Europe) and click **Create app**.   
-5. Go to **Resources** tab in Heroku, then in the **Add-ons** search bar look for **Heorku Postgres**(you can type `postgres`), select **Hobby Dev — Free** and click **Provision** button to add it to your project.     
+5. Go to **Resources** tab in Heroku, then in the **Add-ons** search bar look for **Heroku Postgres**(you can type `postgres`), select **Hobby Dev — Free** and click **Provision** button to add it to your project.     
 6. In Heroku **Settings** click on **Reveal Config Vars**.   
 7. Set the following config variables there:     
 
@@ -205,7 +205,7 @@ Note: More about Google Map key settings can be found [here](#google-maps-api-ke
 You can temporary comment out the current database settings code and just paste the following in the settings.py:   
 ```bash 
   DATABASES = {     
-        'default': dj_database_url.parse("<your Postrgres database URL here>")     
+        'default': dj_database_url.parse("<your Postgres database URL here>")     
     }
   ```
 Important Note: that's just temporary set up, this URL **should not be committed and published to GitHub** for security reasons, so make sure not to commit your changes to Git while the URL is in the settings.py.     
@@ -320,10 +320,14 @@ I will adopt a logical-schema design approach, for example:
 - [Codecov](https://about.codecov.io/)
     - Codecov provides highly integrated tools to group, merge, archive and compare coverage reports
 - [AWS Simple Cloud Storage (S3)](https://aws.amazon.com/) 
-    - to store static and media files in prodcution.
+    - To store static and media files in production.
 
 ### Databases
 - [SQlite3](https://www.sqlite.org/index.html) 
     - I used SQlite3 as development database.
 - [PostgreSQL](https://www.postgresql.org/) 
     - I used SQlite3 as production database hosted in Heroku.
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ Back To Top</a></b>
+</div>
