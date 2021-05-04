@@ -27,8 +27,7 @@ a product/service.
 
 4. [**Technologies Used**](#technologies-used)
     - [**Languages**](#languages)
-    - [**Libraries and Frameworks**](#libraries-and-frameworks)
-    - [**Tools**](#tools)
+    - [**Libraries, Tools, Frameworks & APIs**](#libraries-and-frameworks)
     - [**Databases**](#databases)
 
 5. [**Testing**](#testing)
@@ -46,7 +45,7 @@ a product/service.
 
 ### Project Goals
 
-In this project I will create a e-commerce application for a Smart Wearable Technologies shop. I will use the Wearable Technology Dataset from data.world. The dataset contains information on hundreds of wearables. It contains data on prices, company name and location, URLs for all wearables, as well as the location of the body on which the wearable in worn. 
+In this project I will create a e-commerce application for a Smart Wearable Technologies shop. I will use the Wearable Technology Dataset from [Data.World](https://data.world/datasets/open-data). The dataset contains information on hundreds of wearables. It contains data on prices, company name and location, URLs for all wearables, as well as the location of the body on which the wearable in worn. 
 
 The dataset contains columns such as: body_location, name, price, categories, image, company name (brand). I will use come of those columns to create my own database.
 
@@ -247,7 +246,9 @@ In order to send real emails from the application, you need to connect it to you
 
 
 
-## Data Model
+## Information Architecture
+
+### Data Modelling
 
 I will adopt a OLTP (Online Transaction Processing) approach for the modelling of data in my project:
 
@@ -264,3 +265,65 @@ I will adopt a logical-schema design approach, for example:
 <div align="right">
     <b><a href="#table-of-contents">↥ Back To Top</a></b>
 </div>
+
+## Technologies Used
+
+### Languages
+
+- [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
+    - The project uses **HTML** as building block.
+- [CSS3](https://www.w3.org/Style/CSS/Overview.en.html)
+    - The project uses **Cascading Style Sheets (CSS)** for adding style to the website.
+- [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+    - The project uses **JavaScript (JS)** for adding interactivity to the website.
+- [Python](https://www.python.org/)
+    -  The project uses **Python3** for adding developing the backend functionality of this project.
+- [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+    - I used **Jinja2** as the HTML templating language for Python.
+
+
+### Libraries, Tools, Frameworks & APIs
+
+- [Bootstrap (5)](https://getbootstrap.com/)
+    - The project uses **Bootstrap** to design and customize responsive mobile-first sites.
+- [JQuery (3.5.1)](https://jquery.com/)
+    - This project uses **JQuery** JavaScript library, to manupulate 
+    the HTML document (DOM API) and add interactivity in a much simpler way. 
+- [Balsamiq](https://balsamiq.com/wireframes/)
+    - The project uses **Balsamiq** as wireframing tool.
+- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/)
+    - I use **Chrome DevTools** to inspect and test styling and responsive desing during my development process.
+- [W3C](https://validator.w3.org)
+    - I use **W3C** to check the HTML and CSS files.
+- [JSHint](https://jshint.com/)
+    - I use **JSHint** to check the JS files.
+- [PEP8](http://pep8online.com/)
+    - I use **PEP8 online** to check and validate the Python script files.
+- [AmIResponsive](http://ami.responsivedesign.is)
+    - I use **Am I Responsive?** to check my responsive design and take screenshots of the deployed website.
+- [Fontawesome](https://fontawesome.com)
+    - This project uses **FontAwesome** for including vector icons and social logos.
+- [GoogleFonts](https://fonts.google.com)
+    - This project uses **GoogleFonts** to import the font styles.
+- [GitHub](https://github.com)
+    - I used **GitHub** as my project repository.
+- [GitPod](https://www.gitpod.io)
+    - I used **GitPod** as the cloud-based development environment to write my code.
+- [Heroku](https://www.heroku.com)
+    - I used **Heroku** to deploy my project.
+- [Django (3.1.7)](https://www.djangoproject.com/)
+    - Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
+- [Stripe (2.56.0)](https://stripe.com/ie)
+    - I implemented online payments using Stripe API.
+- [Travis CI](https://www.travis-ci.com/)
+    - I implemented continuous integration features using Travis CI.
+- [Codecov](https://about.codecov.io/)
+    - Codecov provides highly integrated tools to group, merge, archive and compare coverage reports
+- [AWS Simple Cloud Storage (S3)](https://aws.amazon.com/) 
+    - to store static and media files in prodcution.
+
+### Databases
+- [SQlite3](https://www.sqlite.org/index.html) 
+    - I used SQlite3 as development database.
+- [PostgreSQL](https://www.postgresql.org/) 
+    - I used SQlite3 as production database hosted in Heroku.
