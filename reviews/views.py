@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .forms import ReviewForm
 from .models import Review
@@ -34,7 +34,7 @@ def submit_review(request):
         review.created = datetime.datetime.now()
         review.save()
         messages.success(
-            request, f'Your review has been submitted. Thank you!')
+            request, 'Your review has been submitted. Thank you!')
     else:
-        messages.error(request, f'An error has ocurred. Please try again!')
+        messages.error(request, 'An error has ocurred. Please try again!')
     return redirect('home')

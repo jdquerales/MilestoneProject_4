@@ -7,5 +7,6 @@ class ReviewAdmin(admin.ModelAdmin):
     list_filter = ['create', 'user']
     search_fields = ['title']
 
+
 # Register your models here.
 admin.site.register(Review)

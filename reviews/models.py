@@ -1,8 +1,8 @@
 from django.db import models
-from django.contrib.auth.models import User
 from profiles.models import UserProfile
 
 # Create your models here.
+
 
 class Review(models.Model):
     RATING_CHOICES = (
@@ -15,7 +15,7 @@ class Review(models.Model):
     title = models.CharField(max_length=30)
     content = models.TextField()
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE,
-                             related_name='comments', 
+                             related_name='comments',
                              related_query_name='comment')
     created = models.DateField()
     rating = models.IntegerField(choices=RATING_CHOICES, default=5)
