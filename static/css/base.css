@@ -1040,3 +1040,13 @@ Order history
 #id_default_country option:first-child {
   color: #aab7c4;
 }
+
+#review-form{
+  width: 70%;
+}
+
+/*
+.asteriskField {
+  display: none;
+}
+*/
