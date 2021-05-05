@@ -73,7 +73,6 @@ As a proper e-commerce site it will target the following audience: Shopper, Site
 Each CRUD operation will be reflected correspondently to each target audience.
 
 
-![Pallete](./media/pallete.png)
 
 ### User Stories
 
@@ -122,6 +121,19 @@ Each CRUD operation will be reflected correspondently to each target audience.
 - As a store owner I want to be able to add a new product so that I can add new item to my store (**ADD**).
 - As a store owner I want to be able to Edit/Update a product so that I can change product prices, descriptions, images, and other criteria. (**EDIT/UPDATE**)
 - As a store owner I want to be able to delete a product so that I can remove items that are not longer for sale. (**DELETE**) 
+
+
+### Design
+![Pallete](./media/pallete.png)
+
+
+### Wireframes
+
+## Features
+
+### Existing features
+
+### Features left to implement
 
 ## Deployment
 The SmartTeach project was developed using the [GitPod](https://www.gitpod.io/) online IDE and
