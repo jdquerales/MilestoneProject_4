@@ -72,6 +72,9 @@ As a proper e-commerce site it will target the following audience: Shopper, Site
 
 Each CRUD operation will be reflected correspondently to each target audience.
 
+
+![Pallete](./media/pallete.png)
+
 ### User Stories
 
 
