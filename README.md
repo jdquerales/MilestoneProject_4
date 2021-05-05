@@ -328,6 +328,12 @@ I will adopt a logical-schema design approach, for example:
 - [PostgreSQL](https://www.postgresql.org/) 
     - I used SQlite3 as production database hosted in Heroku.
 
+
+![HTML validation](./media/html_validation.png)
+
+![CSS validation](./media/css_validation.png)
+
+
 <div align="right">
     <b><a href="#table-of-contents">↥ Back To Top</a></b>
 </div>
