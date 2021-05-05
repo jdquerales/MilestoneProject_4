@@ -33,7 +33,6 @@ a:hover {
   display: block;
   overflow: visible;
   top: 0;
-  max-height: auto;
   min-height: 85vh;
   white-space: normal;
   object-fit: fill;
@@ -140,7 +139,6 @@ a:hover {
 
 footer {
   background-color: rgba(17, 66, 110, 0.9);
-  max-height: auto;
   min-height: 15vh;
   overflow: hidden;
 }
@@ -718,7 +716,7 @@ button:focus {
   background-color: black;
   color: red;
   margin: 5px 5px 5px 5px;
-  font-weight: 500px;
+  font-weight: 500;
 }
 
 .in-stock {
