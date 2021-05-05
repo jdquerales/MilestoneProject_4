@@ -5,13 +5,7 @@ Work in progress!
 
 ## Stream Fourth Project: Full Stack Frameworks with Django Development - Code Institute
 
-This is the fourth milestone project of my journey as a Software Developer in Code Institute. The aim of this project is to 
-build a full-stack site based around business logic used to control a centrally-owned dataset. I will set up an authentication
-mechanism and provide paid access to the site's data and/or other activities based on the dataset, such as the purchase of 
-a product/service.
-
 ![Responsive](./media/responsive.png)
-
 
 ## Table of Contents
 1. [**UX**](#ux)
@@ -46,6 +40,8 @@ a product/service.
 ## UX
 
 ### Project Goals
+
+This is the fourth milestone project of my journey as a Software Developer in Code Institute. The aim of this project is to  build a full-stack site based around business logic used to control a centrally-owned dataset. I will set up an authentication mechanism and provide paid access to the site's data and/or other activities based on the dataset, such as the purchase of a product/service.
 
 In this project I will create a e-commerce application for a Smart Wearable Technologies shop. I will use the Wearable Technology Dataset from [Data.World](https://data.world/datasets/open-data). The dataset contains information on hundreds of wearables. It contains data on prices, company name and location, URLs for all wearables, as well as the location of the body on which the wearable in worn. 
 
