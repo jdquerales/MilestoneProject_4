@@ -1,238 +1,282 @@
 {% load static %}
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    {% block meta %}
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  {% block meta %}
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  {% endblock %}
-
-  {% block extra_meta %}
-  {% endblock %}
-
-  
-
-  {% block corecss %}
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="{% static 'css/base.css' %}">
-  {% endblock %}
-
-  {% block extra_css %}
-  {% endblock %}
-
-  {% block corejs %}
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
-    integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
-    integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
-    crossorigin="anonymous"></script>
+    {% endblock %} {% block extra_meta %} {% endblock %} {% block corecss %}
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <script
-    src="https://code.jquery.com/jquery-3.6.0.js"
-    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous"></script>
-       <!-- Stripe -->
-  <script src="https://js.stripe.com/v3/"></script>
-  {% endblock %}
-
-
-  {% block extra_js %}
-  {% endblock %}
+      src="https://kit.fontawesome.com/e9c73d7092.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    {% endblock %} {% block extra_css %} {% endblock %} {% block corejs %}
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+      integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+      integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
+    {% endblock %} {% block extra_js %} {% endblock %}
 
   <title>Wearable Tech {% block extra_title %}{% endblock %}</title>
-</head>
-
-<body>
-
-  <div class="header-background">
-
-    <div id="nav" class="sticky-nav row">
-      <div class="col-sm-12 col-md-9">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"> <a href="{% url 'home' %}" class="main-logo-link links">
-                <h2 class="logo-font">SmartTech.</h2>
-              </a></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-              <span> </span>
-              <span> </span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
-
-                {% if request.user.is_authenticated %}
-                <!--  {% if request.user.is_superuser %}
-                {% endif %} -->
-                <li class="nav-item">
-                <a href="{% url 'profile' %}" class="nav-link">Profile</a>
-              </li>
-                <li class="nav-item">
-                  <a href="{% url 'account_logout' %}" class="nav-link"> Logout </a>
-                </li>
-                {% else %}
-                <li class="nav-item">
-                  <a href="{% url 'account_login' %}" class="nav-link"> Login </a>
-                </li>
-                <li class="nav-item">
-                  <a href="{% url 'account_signup' %}" class="nav-link"> Register </a>
-                </li>
-                {% endif %}
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Catalog
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="{% url 'products' %}">All products</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category=fitness">Fitness</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category=medical">Medical</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category=lifestyle">Lifestyle</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category=entertainment">Entertainment</a>
-                    </li>
-                  </ul>
-                </li>
-                {% if request.user.is_authenticated %}
-                <!--  {% if request.user.is_superuser %}
-                {% endif %} -->
-                <li class="nav-item"></li>
-                <a href="{% url 'submit_review_page' %}" class="nav-link">Reviews</a>
-                {% endif %}
-                <li class="list-inline-item">
-                    <a href="{% url 'view_cart' %}">
-                  <span class="shopping-basket-icon"> <span class="badge rounded-pill bg-shopping-cart">
-                    <i class="fas fa-shopping-basket"></i>
-                    <p class="p-basket">
-                    {% if product_count %}
-                    {{ product_count }}
-                    {% else %}
-                    0
-                    {% endif %}
-                    item{{ product_count|pluralize }} selected
-                  </p>
-                  <p class="p-basket">
-                    Total:
-                    {% if grand_total %}
-                    €{{ grand_total|floatformat:2 }}
-                    {% else %}
-                    €0.00
-                    {% endif %}
-                  </p>
-                  </span></span>
+  </head>
+  <body>
+    <div class="header-background">
+      <div id="nav" class="sticky-nav row">
+        <div class="col-sm-12 col-md-9">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <a href="{% url 'home' %}" class="main-logo-link links">
+                  <h2 class="logo-font">SmartTech.</h2>
                 </a>
-                </li>
-
-
-              </ul>
-
-
-            </div>
-          </div>
-
-        </nav>
-      </div>
-      <div class="col-sm-12 col-md-3 d-sm-inline-block form-inline mr-auto ml-md-3 my-2 mw-100">
-        <form method="GET" action="{% url 'products' %}" class="d-flex main-form">
-          <div class="input-group">
-            <input type="text" class="form-control border-0 small" name="search" placeholder="What are you looking for?"
-              aria-label="Search" aria-describedby="basic-addon2" id="target">
-            <div class="input-group-append" id="search-button">
-              <button class="btn btn-primary" type="submit">
-                <i class="fas fa-search fa-sm"></i>
+                </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+                <span> </span>
+                <span> </span>
               </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+                  {% if request.user.is_authenticated %}
+                  <!--  {% if request.user.is_superuser %}
+                {% endif %} -->
+                  <li class="nav-item">
+                    <a href="{% url 'profile' %}" class="nav-link">Profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'account_logout' %}" class="nav-link">
+                      Logout
+                    </a>
+                  </li>
+                  {% else %}
+                  <li class="nav-item">
+                    <a href="{% url 'account_login' %}" class="nav-link">
+                      Login
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'account_signup' %}" class="nav-link">
+                      Register
+                    </a>
+                  </li>
+                  {% endif %}
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Catalog
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li>
+                        <a class="dropdown-item" href="{% url 'products' %}"
+                          >All products</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="{% url 'products' %}?category=fitness"
+                          >Fitness</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="{% url 'products' %}?category=medical"
+                          >Medical</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="{% url 'products' %}?category=lifestyle"
+                          >Lifestyle</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="{% url 'products' %}?category=entertainment"
+                          >Entertainment</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  {% if request.user.is_authenticated %}
+                  <li class="nav-item"></li>
+                  <a href="{% url 'submit_review_page' %}" class="nav-link"
+                    >Reviews</a
+                  >
+                  {% endif %}
+                  <li class="list-inline-item">
+                    <a href="{% url 'view_cart' %}">
+                      <span class="shopping-basket-icon">
+                        <span class="badge rounded-pill bg-shopping-cart">
+                          <i class="fas fa-shopping-basket"></i>
+                          <p class="p-basket">
+                            {% if product_count %} {{ product_count }} 
+                            {% else %} 0 
+                            {% endif %} item{{ product_count|pluralize }} selected
+                          </p>
+                          <p class="p-basket">
+                            Total: {% if grand_total %} €{{grand_total|floatformat:2 }} 
+                            {% else %} €0.00 
+                            {%endif %}
+                          </p>
+                        </span></span
+                      >
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </form>
-
+          </nav>
+        </div>
+        <div
+          class="col-sm-12 col-md-3 d-sm-inline-block form-inline mr-auto ml-md-3 my-2 mw-100"
+        >
+          <form
+            method="GET"
+            action="{% url 'products' %}"
+            class="d-flex main-form"
+          >
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control border-0 small"
+                name="search"
+                placeholder="What are you looking for?"
+                aria-label="Search"
+                aria-describedby="basic-addon2"
+                id="target"
+              />
+              <div class="input-group-append" id="search-button">
+                <button class="btn btn-primary" type="submit">
+                  <i class="fas fa-search fa-sm"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
-
+      {% block content %} {% endblock %}
     </div>
-
-    {% block content %}
-
-
-    {% endblock %}
-  </div>
-
-  <header class="container-fluid fixed-top">
-    <div class="row">
-      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+    <header class="container-fluid fixed-top">
+      <div class="row">
+        <div
+          class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left"
+        ></div>
       </div>
+    </header>
+    {% if messages %}
+    <div class="message-container">
+    {% for message in messages %} 
+      {% with message.level as level %}
+          {% if level == 40 %} 
+              {% include 'includes/toasts/toast_error.html' %}
+          {% elif level == 30 %} 
+              {% include 'includes/toasts/toast_warning.html' %} 
+          {% elif level == 25 %} 
+              {% include 'includes/toasts/toast_success.html' %}
+          {% else %} 
+          {% include 'includes/toasts/toast_info.html' %} {% endif %}
+      {% endwith%} 
+    {% endfor %}
     </div>
-  </header>
-
-  {% if messages %}
-  <div class="message-container">
-      {% for message in messages %}
-          {% with message.level as level %}
-              {% if level == 40 %}
-                  {% include 'includes/toasts/toast_error.html' %}
-              {% elif level == 30 %}
-                  {% include 'includes/toasts/toast_warning.html' %}
-              {% elif level == 25 %}
-                  {% include 'includes/toasts/toast_success.html' %}
-              {% else %}
-                  {% include 'includes/toasts/toast_info.html' %}
-              {% endif %}
-          {% endwith %}
-      {% endfor %}
-  </div>
-{% endif %}
-
-
-  {% block postloadjs %} 
+    {% endif %} 
+    
+    {% block postloadjs %}
     <script type="text/javascript">
-    $(document).ready(function() {
-        $(".toast").toast('show');
-    });
+      $(document).ready(function () {
+        $(".toast").toast("show");
+      });
     </script>
-  {% endblock %}
-
-  <footer>
-    <div class="row container-fluid">
-      <div class="col-lg-4 col-md-4 text-center">
-        <p class="text-white-uppercase lead">GET IN TOUCH: +1 123456789</p>
+    {% endblock %}
+    <footer>
+      <div class="row container-fluid">
+        <div class="col-lg-4 col-md-4 text-center">
+          <p class="text-white-uppercase lead">GET IN TOUCH: +1 123456789</p>
+        </div>
+        <div class="col-lg-4 col-md-4 text-center">
+          <p class="text-white-uppercase lead">
+            FREE HOME DELIVERY ON ORDERS OVER
+            <span
+              class="badge badge-footer rounded-pill bg-info text-dark text-white-uppercase lead"
+              >€{{ free_delivery_threshold }}!</span
+            >
+          </p>
+        </div>
+        <div class="col-lg-4 col-md-4 text-center">
+          <p class="text-white-uppercase lead">FREE RETURNS</p>
+        </div>
       </div>
-
-      <div class="col-lg-4 col-md-4 text-center">
-        <p class="text-white-uppercase lead">FREE HOME DELIVERY ON ORDERS
-          OVER <span class="badge badge-footer rounded-pill bg-info text-dark text-white-uppercase lead">€{{ free_delivery_threshold }}!</span> </p>
+      <div class="row social-links">
+        <div class="col text-center social-links">
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.pinterest.com/" target="_blank"
+            ><i class="fab fa-pinterest"></i>
+          </a>
+          <span class="copyright">
+            © 2021 Copyright <strong> José Querales</strong> . All rights
+            reserved.
+          </span>
+        </div>
       </div>
-
-      <div class="col-lg-4 col-md-4 text-center">
-        <p class="text-white-uppercase lead">FREE RETURNS</p>
-      </div>
-    </div>
-
-    <div class="row social-links">
-      <div class="col  text-center social-links">
-        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest"></i>
-       </a>
-        <span class="copyright"> © 2021 Copyright <strong> José Querales</strong> . All rights reserved. </span>
-      </div>
-    </div>
-
-  </footer>
-
- 
-  
-</body>
-
-
-
+    </footer>
+  </body>
 </html>
