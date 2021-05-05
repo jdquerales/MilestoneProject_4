@@ -10,6 +10,8 @@ build a full-stack site based around business logic used to control a centrally-
 mechanism and provide paid access to the site's data and/or other activities based on the dataset, such as the purchase of 
 a product/service.
 
+![Responsive](./media/responsive.png)
+
 
 ## Table of Contents
 1. [**UX**](#ux)
