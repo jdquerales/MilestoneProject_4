@@ -129,7 +129,7 @@ Each CRUD operation will be reflected correspondently to each target audience.
 #### Colour Scheme
 One of the main goals in UI was to focus user's attention on the products/services images, while prioritazing information. Throughout  the site I have used the following colors palette:
  
-![Color Palette](wireframes/colour-palette.png)
+![Pallete](./media/pallete.png)
 
 #### Typography
 There is one font used across the project: 
@@ -139,7 +139,7 @@ There is one font used across the project:
 - I used [FontAwesome](https://fontawesome.com/) as the main icon library across the project (e.g. for social media links, forms, cart, search and user icons in navigation).
 
 
-![Pallete](./media/pallete.png)
+
 
 
 ### Wireframes
