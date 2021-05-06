@@ -143,3 +143,15 @@
 
 ![mockups](images/admin2.png)
 
+
+## Stripe Payments Testing
+
+![mockups](images/stripe_card_testing.png)
+
+![mockups](images/verification_card.png)
+
+![mockups](images/verificafication_card.png)
+
+![mockups](images/insufficient.png)
+
+![mockups](images/insufficient_card.png)
