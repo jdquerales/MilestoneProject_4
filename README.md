@@ -486,3 +486,31 @@ Item Total | lineitem_total | DecimalField | max_digits=6, decimal_places=2, nul
 <div align="right">
     <b><a href="#table-of-contents">↥ Back To Top</a></b>
 </div>
+
+## Credits
+### Code
+- The project's code was developed by following the [Code Institute](https://codeinstitute.net/) video lessons and based on the understanding of the Boutique Ado Django Mini-Project, but was customized, modified and enhanced to fit the project purposes. Checkout app and profiles app rely heavily on Code Institute Boutique ADO mini-project.
+- I also constantly referred to the following documentation sources during the development: [Django](https://docs.djangoproject.com/en/3.2/), [Stripe](https://stripe.com/docs).
+- During development of this project I extensively consulted the books "**Django 3 by example**" by Antonio Melé and "**Django for beginners**" by William S. Vincent.
+### Content and Media
+- Landing page background was taken from [Pexels](https://www.pexels.com/).
+- Products content and images are taken from [data.world wearable technology database] (https://data.world/crowdflower/wearable-technology-database).
+
+### Acknowledgements
+I would like to thank everyone who has helped me throughout the development of this project:      
+- My mentors Dick Vlaanderen and Guido Cecilio Garcia-Bernal (who joined the party for the last 2 sessions) for their support and helpful suggestions..
+- Many thanks to my fellow students, **Slack community** and, of course, **my friends** and **my family** for the time, patience, help and support!         
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ Back To Top</a></b>
+</div>
+
+---
+
+## Disclaimer
+This site is made for **educational purposes** only.        
+
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ Back To Top</a></b>
+</div>
