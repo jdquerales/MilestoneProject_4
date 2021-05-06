@@ -175,6 +175,20 @@ footer {
   text-align: center;
 }
 
+.decrement-qty {
+  margin: 0px 0px 0px 0px !important;
+  border-radius: 0px !important; 
+}
+
+.increment-qty {
+  margin: 0px 0px 0px 0px !important;
+  border-radius: 0px !important; 
+}
+
+.qty_input {
+  margin: 0px 0px 0px 0px !important;
+}
+
 .social-links a {
   font-size: 18px;
   display: inline-block;
@@ -221,6 +235,13 @@ footer {
 
 .btn-search {
   background-color: #f05f40;
+  border-radius: 0px;
+}
+
+
+.btn-primary-search{
+  border-radius: 0px !important;
+  border-color: none;
 }
 
 .shopping-basket-icon {
