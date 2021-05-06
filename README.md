@@ -125,6 +125,19 @@ Each CRUD operation will be reflected correspondently to each target audience.
 
 ### Wireframes
 
+
+I used **Balsamiq** software to create my initial wireframes, starting 
+with the mobile and desktop design as an overall idea and helping me 
+to make the design responsive afterwards.
+The deployed application slightly differs from the initial
+wireframes as some of the features were evolving as I was working on the development.
+
+[Desktop wireframe](/static/assets/wireframes/MS4_desktop.pdf)
+
+[Mobile/Tablet wireframe](/static/assets/wireframes/MS4_mobile_tablet.pdf)
+
+
+
 ## Features
 
 ### Existing features
@@ -489,7 +502,7 @@ Item Total | lineitem_total | DecimalField | max_digits=6, decimal_places=2, nul
 
 ## Credits
 ### Code
-- The project's code was developed by following the [Code Institute](https://codeinstitute.net/) video lessons and based on the understanding of the Boutique Ado Django Mini-Project, but was customized, modified and enhanced to fit the project purposes. Checkout app and profiles app rely heavily on Code Institute Boutique ADO mini-project.
+- The project's code was developed by following the [Code Institute](https://codeinstitute.net/) video lessons and based on the understanding of the Boutique Ado Django Mini-Project, but was customized, modified and enhanced to fit the project purposes. Checkout app and profiles apps  heavily rely on Code Institute Boutique ADO mini-project.
 - I also constantly referred to the following documentation sources during the development: [Django](https://docs.djangoproject.com/en/3.2/), [Stripe](https://stripe.com/docs).
 - During development of this project I extensively consulted the books "**Django 3 by example**" by Antonio Melé and "**Django for beginners**" by William S. Vincent.
 ### Content and Media
