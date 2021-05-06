@@ -229,7 +229,19 @@ HTML validation:
 
 ![HTML validation](./media/html_validation.png)
 
-HTML validation:
+Checkout page validation:
+
+![HTML validation](./media/checkout.png)
+
+Profiles page validation:
+
+![HTML validation](./media/profiles.png)
+
+Cart page validation:
+
+![HTML validation](./media/cart.png)
+
+CSS validation:
 
 ![CSS validation](./media/css_validation.png)
 
