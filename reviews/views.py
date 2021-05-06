@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib import messages
 from .forms import ReviewForm
 from .models import Review
@@ -10,13 +10,16 @@ import datetime
 
 def submit_review_page(request):
     """ A view to submit a user review"""
-    form = ReviewForm()
-    profile = get_object_or_404(UserProfile, user=request.user)
-    context = {
-        'form': form,
-        'profile': profile,
-    }
-    return render(request, 'reviews/submit_review.html', context)
+    if request.user.is_authenticated:
+        form = ReviewForm()
+        profile = get_object_or_404(UserProfile, user=request.user)
+        context = {
+            'form': form,
+            'profile': profile,
+        }
+        return render(request, 'reviews/submit_review.html', context)
+    else:
+        return redirect(reverse('home'))
 
 
 def submit_review(request):
