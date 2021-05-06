@@ -161,7 +161,21 @@ wireframes as some of the features were evolving as I was working on the develop
 
 ## Features
 
-### Existing features
+## Features
+SmartTech website is composed by eight applications: `home`, `products`, `cart`, `reviews`, `wishlist`, `coupons`, `checkout`, `profiles`.
+
+
+
+
+
+## Features Left to Implement
+
+1. Authentication features using social accounts like Facebook, Twitter, Goggle+.
+2. Store owner view for management (for the current release, product management can be donde only using the **admin** interface provided by Django).
+3. Include product reviews.
+4. Add subscription for newsletters.
+5. Contact form.
+6. Add clearance/offer categories in navegation bar.
 
 ### Features left to implement
 
