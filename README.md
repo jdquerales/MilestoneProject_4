@@ -162,8 +162,19 @@ wireframes as some of the features were evolving as I was working on the develop
 ### Existing Features
 SmartTech website is composed by eight applications: `home`, `products`, `cart`, `reviews`, `wishlist`, `coupons`, `checkout`, `profiles`.
 
-
-
+1. Catalog of products by categories, prices, stock, etc.
+2. Particular product details and add to cart/wishlist functionalities.
+3. Shopping cart on navegation bar visible at any time.
+4. Discount coupons.
+5. Use registration and full authentication functionalities: confirmation emails, password reset, etc.
+7. Personalized profile page for authenticated users
+8. Products filtering (SQL operations) fully functional.
+9. Checkout functionality (for registered and anonymous users).
+10. Online payments.
+11. Store reviews submission for authenticated users.
+12. CRUD (Create, Read, Update, Delete) operations.
+13. Bootstrap toast for success/info/error messages, so that users are informed of what is going on at any time.
+14. Add/remove products to/from wishlist for autehnticated users.
 
 
 ### Features Left to Implement
