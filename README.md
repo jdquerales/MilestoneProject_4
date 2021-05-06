@@ -27,6 +27,7 @@ Work in progress!
     - [**Databases**](#databases)
 
 5. [**Testing**](#testing)
+
 6. [**Deployment**](#deployment)
     - [**Local Deployment**](#local-deployment)
     - [**Heroku Deployment**](#heroku-deployment)
@@ -139,9 +140,6 @@ There is one font used across the project:
 - I used [FontAwesome](https://fontawesome.com/) as the main icon library across the project (e.g. for social media links, forms, cart, search and user icons in navigation).
 
 
-
-
-
 ### Wireframes
 
 
@@ -162,6 +160,61 @@ wireframes as some of the features were evolving as I was working on the develop
 ### Existing features
 
 ### Features left to implement
+
+
+## Testing
+
+## Automatic testing during development
+
+During the entire development of this project a adopted a Test Driven Development approach, as represented in the following diagram:
+
+![TDD](./static/assets/fig2.png)
+
+That approach helped me identify problems in early stages of development and to develop inmmediate solutions for failures in the code. I wrote about 50 testing units covering tests for models, views and forms. Tests file can be found in **apps**  levels directories prefixed by **tests_<model, views, forms>**. To run all tests go the project level command line interface and run the following command:
+
+`coverage run manage.py test`  
+
+If everything goes correctly, you should get the following message on the terminal:
+
+![TDD](./static/assets/tests.png)
+
+Additionally, I have implemented continuous development tools using  [Travis CI](https://www.travis-ci.com/) and [Codecov](https://about.codecov.io/). After every commit, continuous development badges at the beginning of this document are updated, indicating whether tests passed or failed and the percentage of code being covered by unit tests.
+
+As for the moment of writing this documentation [Codecov](https://about.codecov.io/) generated the following report:
+
+![Codecov](./static/assets/coverage.png)
+
+
+## Manual testing of the deployed product
+
+As it can be noted above, 73% of the project is covered by unit tests. Therefore, I have complemented the testing of the website, both in development and as a finished product has been done through **manual testing**.  Due to the extension of the testing procedures,  I have decided to present the manual tests conducted in a separated
+file [Manual Tests](/ManualTesting/testing.md).
+
+
+## Responsive design
+
+The deployed application is fully responsive. I tested 
+my site on Safari, Firefox, Opera and Google Chrome. The
+mobile and desktop version of the website looks very good
+ and it is working as planned.
+
+I used the chrome DevTools to test that the website is fully responsive. I have also used my own Desktop/Laptop and mobile phone.
+I tested the following devices (mobile and tablet sizes):
+
+- Moto G4.
+
+- Galaxy S5.
+
+- Galaxy S9 (my own device).
+
+- iPhone 5/SE, iPhone 6/7/8, iPhone 6/7/8 Plus and  iPhone X.
+
+- iPad and iPad Pro.
+
+- Surface Duo.
+
+I also used **Am I Responsive?** to check my responsive design and to create 
+the final product screenshots presented at the beginning.
 
 ## Deployment
 The SmartTeach project was developed using the [GitPod](https://www.gitpod.io/) online IDE and
@@ -302,7 +355,15 @@ I will adopt a OLTP (Online Transaction Processing) approach for the modelling o
 - Data: Up-to-date, operational.
 - Queries: Simple transactions & frequent updates.
 
+Keeping in mind that the main challenge in data modeling is balancing the needs
+of the application, the performance characteristics of the database engine, 
+and the data retrieval patterns, I adopted the the philosophy that
+while designing my data model I would consider the application usage of the data
+(i.e. queries, updates, and processing of the data) as well as the inherent 
+structure of the data itself.
+
 I will adopt a logical-schema design approach. The data model schema was created by using the Entity-Relationship Diagram (ERD) tool provided by the [PGAdmin](https://www.pgadmin.org/docs/pgadmin4/development/erd_tool.html).
+
 
 
 ![Home page validation](./media/smarttech_revised_model.png)
