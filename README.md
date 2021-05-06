@@ -231,15 +231,15 @@ HTML validation:
 
 Checkout page validation:
 
-![HTML validation](./media/checkout.png)
+![HTML validation](./static/assets/checkout.png)
 
 Profiles page validation:
 
-![HTML validation](./media/profiles.png)
+![HTML validation](./static/assets/profiles.png)
 
 Cart page validation:
 
-![HTML validation](./media/cart.png)
+![HTML validation](./static/assets/cart.png)
 
 CSS validation:
 
