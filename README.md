@@ -1,6 +1,4 @@
-Work in progress!
-
-## Continuous integration reports: 
+## Continuous integration status: 
 [![Build Status](https://www.travis-ci.com/jdquerales/MilestoneProject_4.svg?branch=master)](https://www.travis-ci.com/jdquerales/MilestoneProject_4)  [![codecov](https://codecov.io/gh/jdquerales/MilestoneProject_4/branch/master/graph/badge.svg)](https://codecov.io/gh/jdquerales/MilestoneProject_4)
 
 ## Stream Fourth Project: Full Stack Frameworks with Django Development - Code Institute
@@ -30,7 +28,7 @@ The deployed website can be found [here](https://ms4-smart-tech.herokuapp.com/).
     - [**Libraries, Tools, Frameworks & APIs**](#libraries-and-frameworks)
     - [**Databases**](#databases)
 
-5. [**Testing**](#testing)
+5. [**Testing & Validation**](#testing)
 
 6. [**Deployment**](#deployment)
     - [**Local Deployment**](#local-deployment)
@@ -180,7 +178,7 @@ SmartTech website is composed by eight applications: `home`, `products`, `cart`,
 ### Features left to implement
 
 
-## Testing
+## Testing & Validation
 
 ## Automatic testing during development
 
@@ -207,6 +205,33 @@ As for the moment of writing this documentation [Codecov](https://about.codecov.
 
 As it can be noted above, 73% of the project is covered by unit tests. Therefore, I have complemented the testing of the website, both in development and as a finished product has been done through **manual testing**.  Due to the extension of the testing procedures,  I have decided to present the manual tests conducted in a separated
 file [Manual Tests](/ManualTesting/testing.md).
+
+
+## Code validation
+
+I used **W3C** to check my HTML and CSS files. I used **JSHint** validator to check my Javascript files. I used **PEP8online** to validate Python files.
+Below screenshots of the validation results are exhibited.
+
+## HMTL & CSS validation 
+All html pages passed the **W3C** validator. A selection of validation outputs is shown as follows. A complete selection of screenshots for every html page can be found at [HTML validation](/static/assets/code_validation/)
+
+HTML validation:
+
+![HTML validation](./media/html_validation.png)
+
+HTML validation:
+
+![CSS validation](./media/css_validation.png)
+
+
+## Python code validation:
+During development I used the command line interface in Gitpod to detect problems
+with Python code standard conventions (PEP8).
+
+
+![PEP8 validation](./static/assets/pep8.png)
+
+
 
 
 ## Responsive design
@@ -588,10 +613,6 @@ Item Total | lineitem_total | DecimalField | max_digits=6, decimal_places=2, nul
 - [PostgreSQL](https://www.postgresql.org/) 
     - I used SQlite3 as production database hosted in Heroku.
 
-
-![HTML validation](./media/html_validation.png)
-
-![CSS validation](./media/css_validation.png)
 
 
 <div align="right">
