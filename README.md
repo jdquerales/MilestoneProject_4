@@ -173,7 +173,7 @@ SmartTech website is composed by eight applications: `home`, `products`, `cart`,
 3. Include product reviews.
 4. Add subscription for newsletters.
 5. Contact form.
-6. Add clearance/offer categories in navegation bar.
+6. Add clearance/latests offers categories in navegation bar.
 
 ### Features left to implement
 
