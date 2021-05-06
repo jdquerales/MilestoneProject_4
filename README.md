@@ -270,7 +270,7 @@ I will adopt a OLTP (Online Transaction Processing) approach for the modelling o
 - Data: Up-to-date, operational.
 - Queries: Simple transactions & frequent updates.
 
-I will adopt a logical-schema design approach, for example:
+I will adopt a logical-schema design approach. The data model schema was created by using the Entity-Relationship Diagram (ERD) tool provided by the [PGAdmin](https://www.pgadmin.org/docs/pgadmin4/development/erd_tool.html).
 
 
 ![Home page validation](./media/smarttech_revised_model.png)
@@ -278,6 +278,142 @@ I will adopt a logical-schema design approach, for example:
 <div align="right">
     <b><a href="#table-of-contents">↥ Back To Top</a></b>
 </div>
+
+The database used in this project contains a total of 11 tables, which has been created using Django models. Different models can be found at the project level path: **<app_name>/models.py**. In the following I will describe each model grouped by app name:
+
+#### Profile App
+##### Profile
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
+ User | user | OneToOneField 'User' |  primary_key=True, on_delete=models.CASCADE
+ Phone number | default_phone_number | CharField | max_length=20, null=True, blank=True
+ Street Addres 1 | default_street_address1 | CharField | max_length=80, null=True, blank=True
+ Street Addres 2 | default_street_address1 | CharField | max_length=80, null=True, blank=True
+ Town or City | default_town_or_city | CharField | max_length=40, null=True, blank=True
+ County | default_county | CharField | max_length=80, null=True, blank=True
+ Postcode | default_postcode | CharField | max_length=20, null=True, blank=True
+ Country | default_country | CountryField | blank_label='Country', null=True, blank=True
+
+#### Product App
+##### Product
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
+ Description | description | TextField |  
+ Name | friendly_name | CharField | max_length=254
+ Price | default_street_address1 | DecimalField | max_digits=6, decimal_places=2
+ Category | category  | ForeignKey('Category') | null=True, blank=True, on_delete=models.SET_NULL
+ Body Location | body_location| ForeignKey('Location') | null=True, blank=True, on_delete=models.SET_NULL
+ Brand | brand | CharField | max_length=254, null=True, blank=True
+ Origin | origin | ForeignKey('Origin') | null=True, blank=True, on_delete=models.SET_NULL
+ Image | image | ImageField | null=True, blank=True
+ Stock | stock | BooleanField | blank_label='Country', null=True, blank=True
+ Users Wishlist | user_wishlist | ManyToManyField 'User' | related_name="user_wishlist", blank=True
+
+##### Location 
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
+ Description | description | TextField |  
+ Name | name | CharField | max_length=254
+ Friendly Name | friendly_name  | max_length=254, null=True, blank=True
+ 
+##### Origin
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
+ Description | description | TextField |  
+ Name | name | CharField | max_length=254
+ Friendly Name | friendly_name  | max_length=254, null=True, blank=True
+
+##### 
+
+Due to the **ManyToManyField** relationship between **User** and **Product** tables through the **user_wishlist** field,
+Django automatically generates a linked table (name **UserProfile_Products**) in the ER diagram abow.
+
+##### UserProfile_Products
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
+ UserProfile_user_id| UserProfile_user_id |  |  
+ Products_wishlist |  Products_wishlist |  |  
+
+
+##### Category
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
+ Description | description | TextField |  
+ Name | name | CharField | max_length=254
+ Friendly Name | friendly_name  | max_length=254, null=True, blank=True
+
+
+#### Review App
+##### Review
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
+ Title | title | CharField |  max_length=30
+ Content | content | TextField | 
+ User | user | ForeignKey('UserProfile') | on_delete=models.CASCADE, related_name='comments', related_query_name='comment'
+ Created | created | DateField | max_length=80, null=True, blank=True
+ Rating | rating | IntegerField | choices=RATING_CHOICES, default=5
+
+#### Coupon App
+##### Coupon
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
+ Code | title | CharField |  max_length=50, unique=True
+ Valid From | valid_from | DateTimeField  | 
+ Valid To | valid_to | DateTimeField | on_delete=models.CASCADE, related_name='comments', related_query_name='comment'
+ Discount | created | IntegerField | validators=[MinValueValidator(0), MaxValueValidator(100)])
+ Active | active | BooleanField | 
+
+#### Profile App
+##### Profile
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
+ User | user | OneToOneField 'User' |  primary_key=True, on_delete=models.CASCADE
+ Phone number | default_phone_number | CharField | max_length=20, null=True, blank=True
+ Street Addres 1 | default_street_address1 | CharField | max_length=80, null=True, blank=True
+ Street Addres 2 | default_street_address1 | CharField | max_length=80, null=True, blank=True
+ Town or City | default_town_or_city | CharField | max_length=40, null=True, blank=True
+ County | default_county | CharField | max_length=80, null=True, blank=True
+ Postcode | default_postcode | CharField | max_length=20, null=True, blank=True
+ Country | default_country | CountryField | blank_label='Country', null=True, blank=True
+
+
+ #### Checkout App
+##### Order
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
+Order Number | order_number | CharField | max_length=32, null=False, editable=False
+Profile | user_profile | ForeignKey 'UserProfile' | on_delete=models.SET_NULL, null=True, blank=True, related_name='orders'
+Full Name | full_name | CharField | max_length=50, null=False, blank=False
+Email | email | EmailField | max_length=254, null=False, blank=False
+Phone number | phone_number | CharField | max_length=20, null=False, blank=False
+Address Line1 | address_line1 | CharField | max_length=80, null=False, blank=False
+Address Line2 | address_line2 | CharField | max_length=80, null=False, blank=False
+Town/City | town_or_city | CharField | max_length=40, null=False, blank=False
+County | county | CharField | max_length=50, null=True, blank=True
+Postcode | postcode | CharField | max_length=20, null=True, blank=True
+Country | country | CountryField | blank_label='Country*', null=False, blank=False
+Purchase Date | date | DateTimeField | auto_now_add=True
+Delivery Cost | delivery_cost | DecimalField | max_digits=6, decimal_places=2, null=False, default=0
+Order Total | order_total | DecimalField | max_digits=10, decimal_places=2, null=False, default=0
+Grand Total | grand_total | DecimalField | max_digits=10, decimal_places=2, null=False, default=0
+Original Cart | original_cart | TextField | null=False, blank=False, default=''
+Stripe Pid | stripe_pid | CharField | max_length=254, null=False, blank=False, default=''
+Comment | comment | TextField | max_length=254, null=True, blank=True
+
+
+##### Order Line Item
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
+Order | order | ForeignKey 'Order' | null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems'
+Product | product | ForeignKey 'Product' | null=False, blank=False, on_delete=models.CASCADE
+Quantity | quantity | IntegerField | null=False, blank=False, default=0
+Item Total | lineitem_total | DecimalField | max_digits=6, decimal_places=2, null=False, blank=False, editable=False
+
 
 ## Technologies Used
 
