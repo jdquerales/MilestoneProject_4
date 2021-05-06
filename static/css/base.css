@@ -276,7 +276,7 @@ footer {
   margin: 0px 0px 0px 0px;
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
-  padding: 0px 0px 0px 0px;
+  padding: 0px 15px 0px 15px;
 }
 
 .row-cart {
@@ -292,7 +292,7 @@ footer {
 }
 
 .card {
-  min-height: 400px;
+  min-height: 550px;
   width: 100%;
   min-width: 100%;
   align-items: center;
