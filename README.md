@@ -281,7 +281,7 @@ To be able to run this project, the following tools have to be installed:
 
 Apart from that, you also need to create accounts with the following services:
 - [Stripe](https://stripe.com/en-ie)
-- [AWS](https://aws.amazon.com/) to setup the [S3 basket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
+- [AWS](https://aws.amazon.com/) to setup the [S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
 - [Gmail](https://mail.google.com/)
 
 #### Directions
