@@ -304,6 +304,10 @@ footer {
   margin: 10px 0px 10px 0px;
 }
 
+.row-shopping-cart {
+  padding: 0px 0px 0px 0px !important;
+}
+
 .nav-link {
   font-size: 28px;
 }

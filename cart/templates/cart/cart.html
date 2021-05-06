@@ -14,19 +14,19 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row row-shopping-cart">
         {% if cart_items %}
         <div class="card card-cart">
-            <div class="row">
+            <div class="row row-shopping-cart">
                 <div class="col-md-8 cart">
                     <div class="title">
-                        <div class="row">
+                        <div class="row row-shopping-cart">
                             <div class="col">
                                 <h4><b> {{ product_count }} item{{ product_count|pluralize }} </b></h4>
                             </div>
                         </div>
                     </div>
-                    <div class="row row-cart border-bottom">
+                    <div class="row row-cart border-bottom row-shopping-cart">
                         <div class="row main align-items-center">
                             <div class="col-2"> </div>
                             <div class="col">
@@ -40,7 +40,7 @@
                     {% for item in cart_items %}
                     {% with product=item.product %}
                     <div class="row row-cart border-bottom">
-                        <div class="row main align-items-center">
+                        <div class="row row-shopping-cart main align-items-center">
                             <div class="col-2"> <img
                                 src="{{ MEDIA_URL }}{{product.image.url}}"
                                 class="card-img-top imag-fluid"
