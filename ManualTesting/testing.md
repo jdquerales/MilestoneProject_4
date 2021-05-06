@@ -46,11 +46,12 @@
 
 ![mockups](images/reset_confirm.png)
 
-![mockups](images/email1.png)
-
-![mockups](images/change1.png)
+![mockups](images/reset_email.png)
 
 ![mockups](images/change.png)
+
+![mockups](images/reset_success.png)
+
 
 
 - As a Site User I want to be able to receive a confirmation email after registering so that I can verify that my account was successfully created.
