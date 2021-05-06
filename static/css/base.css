@@ -14,8 +14,8 @@ body {
 }
 
 .my-2 {
-    margin-top: 1.1rem!important;
-    margin-bottom: .5rem!important;
+  margin-top: 1.1rem !important;
+  margin-bottom: 0.5rem !important;
 }
 
 a {
@@ -99,13 +99,12 @@ a:hover {
   margin: 0px 0px 0px 0px;
 }
 
-
 .btn-apply {
   background-color: #5075af;
   color: white;
   border-radius: 10px;
   padding: 1rem 1.5rem;
-  font-size: 1.0rem;
+  font-size: 1rem;
   height: 50%;
 }
 
@@ -281,7 +280,7 @@ footer {
 }
 
 .row-cart {
-margin: 10px 0px 10px 0px;
+  margin: 10px 0px 10px 0px;
 }
 
 .nav-link {
@@ -461,20 +460,20 @@ button:focus {
 }
 
 .btn-yellow {
-  background-color: #FECC67;
+  background-color: #fecc67;
   width: 150px;
   color: #11426e;
   border-radius: 15px;
   margin: 5px 0px 5px 0px;
-  font-size: 16px
+  font-size: 16px;
 }
 
 .btn-yellow-wishlist {
-  background-color: #FECC67;
+  background-color: #fecc67;
   color: #11426e;
   border-radius: 15px;
   margin: 5px 0px 5px 0px;
-  font-size: 16px
+  font-size: 16px;
 }
 
 .btn-yellow:hover {
@@ -530,7 +529,6 @@ button:focus {
   text-align: center;
   font-size: 30px;
 }
-
 
 .font-weight-bold-summary-titles {
   font-weight: bold;
@@ -630,7 +628,7 @@ button:focus {
   margin: 10vh 10vh 10vh 10vh;
 }
 
-@media (max-width: 620px){
+@media (max-width: 620px) {
   #row-product {
     margin: 5vh 5vh 5vh 5vh;
   }
@@ -783,7 +781,6 @@ button:focus {
   display: none;
 }
 
-
 /* Shopping cart */
 
 .summary {
@@ -795,19 +792,19 @@ button:focus {
   min-height: 25rem;
 }
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
   .summary {
-      border-top-right-radius: unset;
-      border-bottom-left-radius: 1rem
+    border-top-right-radius: unset;
+    border-bottom-left-radius: 1rem;
   }
 }
 
 .summary .col-2 {
-  padding: 0
+  padding: 0;
 }
 
 .summary .col-10 {
-  padding: 0
+  padding: 0;
 }
 
 .card-cart {
@@ -825,12 +822,12 @@ button:focus {
   background-color: #fff;
   padding: 4vh 5vh;
   border-bottom-left-radius: 1rem;
-  border-top-left-radius: 1rem
+  border-top-left-radius: 1rem;
 }
 
 .cart-items {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 /*********************************************
@@ -869,7 +866,7 @@ button:focus {
 				CheckOut & Stripe
 *********************************************/
 
-.text-bold-red{
+.text-bold-red {
   color: red;
   font-weight: bold;
 }
@@ -899,66 +896,65 @@ button:focus {
 }
 
 .stripe-style-input::placeholder {
-    color: #aab7c4;
+  color: #aab7c4;
 }
 
 .fieldset-label {
-    position: relative;
-    right: .5rem;
+  position: relative;
+  right: 0.5rem;
 }
 
 #payment-form .form-control,
 #card-element {
-    color: #000;
-    border: 1px solid #000;
+  color: #000;
+  border: 1px solid #000;
 }
 
 select,
 select option {
-    color: #000000;
+  color: #000000;
 }
 
-select:invalid
-select option[value=""] {
-    color: #aab7c4 !important;
+select:invalid select option[value=""] {
+  color: #aab7c4 !important;
 }
 
 #loading-overlay {
-	display: none;
-	position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(17, 66, 110, 0.9);
-    z-index: 9999;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 66, 110, 0.9);
+  z-index: 9999;
 }
 
 .loading-spinner {
-	  display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100%;
 }
 
 .icon-loading {
-  color : #ff7b7b;
+  color: #ff7b7b;
 }
 
 /*********************************************
 				Profile app
 *********************************************/
 
-.form-check{
+.form-check {
   margin-top: 10px !important;
   padding-left: 0px !important;
 }
 
-.user-form{
-    display: flex !important;
-    align-items: center !important;
-    width: 100% !important;
+.user-form {
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
 }
 
 #id_remember {
@@ -966,7 +962,6 @@ select option[value=""] {
   margin-left: 0px !important;
   margin-right: 5px !important;
 }
-
 
 /* Allauth form formatting */
 
@@ -980,7 +975,7 @@ select option[value=""] {
   border-radius: 0;
 }
 
-.allauth-form-inner-content label:not([for='id_remember']) {
+.allauth-form-inner-content label:not([for="id_remember"]) {
   display: none;
 }
 
@@ -989,9 +984,9 @@ select option[value=""] {
 }
 
 .allauth-form-inner-content button,
-.allauth-form-inner-content input[type='submit'] {
-/* btn */
-display: inline-block;
+.allauth-form-inner-content input[type="submit"] {
+  /* btn */
+  display: inline-block;
   font-weight: 400;
   color: #fff;
   text-align: center;
@@ -1002,32 +997,32 @@ display: inline-block;
   user-select: none;
   background-color: #000;
   border: 1px solid #000;
-  padding: .375rem .75rem;
+  padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0;
 
   /* standard bootstrap btn transitions */
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-color: #fff;
+.allauth-form-inner-content input[type="submit"]:hover {
+  color: #fff;
   background-color: #222;
   border-color: #222;
 }
 
 .allauth-form-inner-content a {
-color: #17a2b8; /* text-info */
+  color: #17a2b8; /* text-info */
 }
-
 
 /********************
 Whislist
 *********************/
 
-#error-wishlist{
+#error-wishlist {
   font-style: italic;
   color: red;
   font-weight: bold;
@@ -1037,7 +1032,7 @@ Whislist
 Order history
 *********************/
 
-.order-history{
+.order-history {
   max-height: 416px; /* height of profile form + submit button */
   overflow-y: auto;
 }
@@ -1059,59 +1054,51 @@ Order history
   color: #aab7c4;
 }
 
-#review-form{
+#review-form {
   width: 70%;
 }
 
-
 .btn.btn-outline-black.rounded-0,
-    .btn.btn-black.rounded-0 {
-        padding: .375rem .375rem;
-        margin: 5px 5px 5px 5px !important;
-    }
-
-
-#checkout:hover {
-      color:  black;
+.btn.btn-black.rounded-0 {
+  padding: 0.375rem 0.375rem;
+  margin: 5px 5px 5px 5px !important;
 }
 
-    .btn.btn-outline-black.rounded-0.btn-lg,
-    .btn.btn-black.rounded-0.btn-lg {
-        padding: .375rem .375rem;
-        font-size: .50rem;
-    }
+#checkout:hover {
+  color: black;
+}
 
-    .rounded-0 {
-      border-radius: 10px !important;
-    }
+.btn.btn-outline-black.rounded-0.btn-lg,
+.btn.btn-black.rounded-0.btn-lg {
+  padding: 0.375rem 0.375rem;
+  font-size: 0.5rem;
+}
+
+.rounded-0 {
+  border-radius: 10px !important;
+}
 
 .text-muted {
   font-size: 30px;
 }
 
-.profile-column{
+.profile-column {
   margin: 10px 10px 10px 10px;
 }
 
 @media screen and (min-width: 991px) {
-  .profile-div{
+  .profile-div {
     width: 50%;
   }
 }
-.wishlist-column{
+.wishlist-column {
   margin: 20px 20px 20px 20px;
 }
 
-.profile{
+.profile {
   margin-top: 10px;
 }
 
-.profile-div{
+.profile-div {
   border-style: groove;
 }
-
-/*
-.asteriskField {
-  display: none;
-}
-*/
