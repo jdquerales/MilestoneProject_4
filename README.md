@@ -5,6 +5,10 @@ Work in progress!
 
 ## Stream Fourth Project: Full Stack Frameworks with Django Development - Code Institute
 
+## Live website
+
+The deployed website can be found [here](https://ms4-smart-tech.herokuapp.com/).
+
 ![Responsive](./media/responsive.png)
 
 ## Table of Contents
