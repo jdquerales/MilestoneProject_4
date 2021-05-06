@@ -174,7 +174,7 @@ SmartTech website is composed by eight applications: `home`, `products`, `cart`,
 11. Store reviews submission for authenticated users.
 12. CRUD (Create, Read, Update, Delete) operations.
 13. Bootstrap toast for success/info/error messages, so that users are informed of what is going on at any time.
-14. Add/remove products to/from wishlist for autehnticated users.
+14. Add/remove products to/from wishlist for authenticated users.
 
 
 ### Features Left to Implement
