@@ -28,7 +28,7 @@ The deployed website can be found [here](https://ms4-smart-tech.herokuapp.com/).
     - [**Libraries, Tools, Frameworks & APIs**](#libraries-and-frameworks)
     - [**Databases**](#databases)
 
-5. [**Testing & Validation**](#testing)
+5. [**Testing & Validation**](#testing-&-validation)
 
 6. [**Deployment**](#deployment)
     - [**Local Deployment**](#local-deployment)
