@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from products.models import Product
 from .models import UserProfile
@@ -8,31 +8,33 @@ def profile(request):
     """Display the user's profile"""
     template = 'profiles/profile.html'
 
-    profile = get_object_or_404(UserProfile, user=request.user)
+    if request.user.is_authenticated:
+        profile = get_object_or_404(UserProfile, user=request.user)
+        if request.method == 'POST':
+            form = UserProfileForm(request.POST, instance=profile)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Profile updated successfully')
+        
+        
+        form = UserProfileForm(instance=profile)
+        orders = profile.orders.all()
 
-    if request.method == 'POST':
-        form = UserProfileForm(request.POST, instance=profile)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Profile updated successfully')
-    
-    
-    form = UserProfileForm(instance=profile)
-    orders = profile.orders.all()
+        wishlist = Product.objects.filter(user_wishlist=request.user)
+        # Here I retrieve all products from user wishlist
+        print(wishlist)
+        print(orders)
 
-    wishlist = Product.objects.filter(user_wishlist=request.user)
-    # Here I retrieve all products from user wishlist
-    print(wishlist)
-    print(orders)
-
-    context = {
-        'profile': profile,
-        'form': form,
-        'wishlist': wishlist,
-        'orders': orders}
+        context = {
+            'profile': profile,
+            'form': form,
+            'wishlist': wishlist,
+            'orders': orders}
+        
+        return render(request, template, context)
+    else:
+        return redirect(reverse('home'))
     
-    return render(request, template, context)
- 
     
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
