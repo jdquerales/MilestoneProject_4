@@ -298,6 +298,13 @@ footer {
   align-items: center;
 }
 
+@media screen and (max-width: 600px) {
+  .card {
+    min-height: 400px;
+  }
+}
+
+
 .card-wishlist {
   min-height: 0px !important;
   width: 50%;
